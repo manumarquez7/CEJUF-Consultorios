@@ -31,14 +31,16 @@
     <meta name="theme-color" content="#E8EAED">
     
     <!-- Bloquear auto-dark mode de navegadores móviles para cuidar el diseño -->
-    <meta name="color-scheme" content="light">
+    <meta name="color-scheme" content="light only">
 
     <!-- Meta tags para iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
     <!-- Preloads para mejorar LCP -->
-    <link rel="preload" as="image" href="CEJUF%20LOGO%20SECUNDARIO.jpg">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="preload" as="image" href="ingreso.webp" fetchpriority="high">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="CEJUF%20ISOLOGO%20PNG@300x.png">
@@ -52,8 +54,9 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap"
         rel="stylesheet">
 
-    <!-- FontAwesome para íconos nítidos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- FontAwesome para íconos nítidos (Carga optimizada) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css">
 
     <!-- Schema Markup Local SEO -->
     <script type="application/ld+json">
@@ -125,6 +128,34 @@
     </script>
 
     <style>
+        /* ==========================================
+           FORZAR MODO CLARO Y BLOQUEAR AUTO-DARK
+           ========================================== */
+        :root {
+            color-scheme: light;
+        }
+
+        /* Ocultamiento para SEO (Google lo lee, el usuario no) */
+        .seo-hidden {
+            position: absolute;
+            left: -9999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        html {
+            color-scheme: light;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            html, body {
+                background: #E8EAED;
+                color: #1F2933;
+            }
+        }
+
         /* ==========================================
            VARIABLES DE DISEÑO (Basado en el brief)
            ========================================== */
@@ -382,9 +413,11 @@
             position: relative;
             padding: 160px 0 100px 0;
             min-height: 100vh;
+            min-height: 100dvh; /* Dynamic Viewport Height para móviles */
             display: flex;
             align-items: center;
             overflow: hidden;
+            z-index: 1; /* Previene fondos negros por glows */
         }
 
         /* Glows de los 3 colores */
@@ -743,7 +776,16 @@
 
             <div class="hero-visual reveal" style="transition-delay: 200ms;">
                 <div class="hero-img-wrapper">
-                    <img src="ingreso.webp" alt="Consultorio de CEJUF en Río Grande Tierra del Fuego" class="hero-img">
+                    <img 
+                        src="ingreso.webp" 
+                        srcset="ingreso-480.webp 480w, ingreso-768.webp 768w, ingreso-1200.webp 1200w"
+                        sizes="(max-width:768px) 100vw, 50vw"
+                        width="1200" 
+                        height="700" 
+                        fetchpriority="high"
+                        decoding="async"
+                        alt="Consultorio de CEJUF en Río Grande Tierra del Fuego" 
+                        class="hero-img">
                 </div>
 
                 <div class="float-badge fb-1">
@@ -1098,7 +1140,7 @@
 
                 <div class="loc-map">
                     <iframe
-                        src="https://maps.google.com/maps?q=CEJUF%20Consultorios%20Rio%20Grande&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        src="https://maps.google.com/maps?q=Estrada%201784%20Rio%20Grande%20Tierra%20del%20Fuego&t=&z=15&ie=UTF8&iwloc=&output=embed"
                         allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
@@ -1189,7 +1231,7 @@
     </section>
 
     <!-- SECCIÓN SEO LOCAL OCULTA (Indexable por Google) -->
-    <section style="display:none">
+    <section class="seo-hidden">
         <h2>Psicólogos en Río Grande</h2>
         <p>
             En CEJUF Consultorios contamos con psicólogos en Río Grande especializados en atención para niños, adolescentes y adultos, brindando un espacio seguro de salud mental y bienestar emocional.
