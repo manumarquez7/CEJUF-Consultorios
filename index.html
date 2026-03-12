@@ -28,7 +28,10 @@
 
     <!-- Canonical & Theme Color -->
     <link rel="canonical" href="https://cejufconsultorios.com">
-    <meta name="theme-color" content="#F4F6F7">
+    <meta name="theme-color" content="#E8EAED">
+    
+    <!-- Bloquear auto-dark mode de navegadores móviles para cuidar el diseño -->
+    <meta name="color-scheme" content="light">
 
     <!-- Meta tags para iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -179,11 +182,15 @@
             color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
+            /* Evita que palabras muy largas rompan el diseño */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
         h1, h2, h3, h4 {
             font-family: 'Plus Jakarta Sans', sans-serif;
             line-height: 1.2;
+            word-wrap: break-word;
         }
 
         a { text-decoration: none; }
@@ -625,10 +632,11 @@
             .hero-glow-1, .hero-glow-2, .hero-glow-3 { display: none; }
             .nav-links, .btn-nav { display: none; }
             .mobile-toggle { display: block; }
-            .nav-links.active { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: var(--bg-surface); padding: 2rem; border-bottom: 1px solid rgba(0, 0, 0, 0.05); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); }
+            .nav-links.active { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: var(--bg-surface); padding: 2rem; border-bottom: 1px solid rgba(0, 0, 0, 0.05); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); box-sizing: border-box; }
             .hero { min-height: auto; }
-            .hero-text h1 { font-size: 2.5rem; }
-            .sec-title { font-size: 2.2rem; }
+            /* Se reduce el tamaño de H1 en móviles para que "Psicopedagogía" no desborde */
+            .hero-text h1 { font-size: 2rem; line-height: 1.3; -webkit-hyphens: auto; hyphens: auto; }
+            .sec-title { font-size: 2rem; }
             .features-grid { flex-direction: column; align-items: center; gap: 1rem; }
             .footer-grid { grid-template-columns: 1fr; text-align: center; }
             .footer-col ul li { justify-content: center; text-align: center; }
@@ -1467,3 +1475,4 @@
     </script>
 </body>
 </html>
+
