@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEJUF Consultorios | Psicología, Psicopedagogía y Fonoaudiología en Río Grande</title>
+    <meta name="description"
+        content="Centro de salud en Río Grande, Tierra del Fuego. Psicología, Psicopedagogía, Fonoaudiología y Musicoterapia. Turnos rápidos por WhatsApp en CEJUF Consultorios.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="CEJUF Consultorios">
+    <meta name="geo.region" content="AR-V">
+    <meta name="geo.placename" content="Río Grande">
+
+    <!-- Open Graph SEO -->
+    <meta property="og:title" content="CEJUF Consultorios | Salud Integral en Río Grande">
+    <meta property="og:description"
+        content="Psicología, Psicopedagogía, Fonoaudiología y Musicoterapia en Río Grande. Turnos por WhatsApp.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_AR">
+    <meta property="og:image" content="https://tusitio.com/preview-cejuf.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://tusitio.com">
+
+    <!-- Canonical & Theme Color -->
+    <link rel="canonical" href="https://tusitio.com">
+    <meta name="theme-color" content="#F4F6F7">
+
+    <!-- Preloads para mejorar LCP -->
+    <link rel="preload" as="image" href="CEJUF%20LOGO%20SECUNDARIO.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="CEJUF%20ISOLOGO%20PNG@300x.png">
+    <link rel="apple-touch-icon" href="CEJUF%20ISOLOGO%20PNG@300x.png">
+
+    <!-- Fuentes premium: Plus Jakarta Sans para títulos, Inter para textos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome para íconos nítidos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Schema Markup Local SEO -->
+    <script type="application/ld+json">
+    {
+     "@context": "https://schema.org",
+     "@type": "MedicalBusiness",
+     "name": "CEJUF Consultorios",
+     "address": {
+       "@type": "PostalAddress",
+       "streetAddress": "Estrada 1784",
+       "addressLocality": "Río Grande",
+       "addressRegion": "Tierra del Fuego",
+       "addressCountry": "AR"
+     },
+     "telephone": "+542964402962"
+    }
+    </script>
+
+    <style>
+        /* ==========================================
+           VARIABLES DE DISEÑO (Basado en el brief)
+           ========================================== */
+        :root {
+            /* Colores Base */
+            --bg-main: #E8EAED; /* Fondo principal un poco más gris */
+            --bg-surface: #FFFFFF;
+            --bg-surface-light: #F4F6F8; /* Gris muy claro para contrastar */
+            --bg-darker: #DFE3E7; /* Gris un poco más oscuro para franjas */
+
+            /* Colores de Marca */
+            --brand-red: #E04E59;
+            --brand-yellow: #D9A22E;
+            --brand-green: #A8C83C;
+            --brand-gradient: linear-gradient(90deg, var(--brand-red), var(--brand-yellow), var(--brand-green));
+
+            /* Textos */
+            --text-main: #1F2933;
+            --text-muted: #5A6772;
+            --text-dim: #9AA5B1;
+
+            /* Utilidades */
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --radius-sm: 8px;
+            --trans: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+            /* Sombras / Glows */
+            --shadow-card: 0 15px 45px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 25px 60px rgba(0, 0, 0, 0.12);
+        }
+
+        /* ==========================================
+           RESET Y BASE
+           ========================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            line-height: 1.2;
+        }
+
+        a { text-decoration: none; }
+
+        .container {
+            width: 90%;
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        /* ==========================================
+           UTILIDADES DE COLOR COMPARTIDAS
+           ========================================== */
+        .text-gradient-red {
+            background: linear-gradient(135deg, var(--brand-red), #b93d47);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+        .text-gradient-yellow {
+            background: linear-gradient(135deg, var(--brand-yellow), #b88824);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+        .text-gradient-green {
+            background: linear-gradient(135deg, var(--brand-green), #7ba617);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+        .text-gradient-mix {
+            background: var(--brand-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        /* ==========================================
+           UTILIDADES (Tags, Títulos, Animaciones)
+           ========================================== */
+        .sec-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            transition: var(--trans);
+        }
+
+        .sec-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        /* Modificadores de Tag */
+        .sec-tag.tag-red::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--brand-red); display: block;}
+        .sec-tag.tag-yellow::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--brand-yellow); display: block;}
+        .sec-tag.tag-green::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--brand-green); display: block;}
+
+        .sec-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+        }
+
+        .sec-desc {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 3rem auto;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity .6s ease, transform .6s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ==========================================
+           BOTONES MULTICOLOR
+           ========================================== */
+        .btn-base {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: var(--trans);
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+        }
+
+        .btn-base::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: all 0.6s ease;
+            z-index: 1;
+        }
+        .btn-base:hover::before { left: 100%; }
+        .btn-base:hover { transform: translateY(-3px); }
+
+        /* Variantes de Botones */
+        .btn-green { background: var(--brand-green); color: #111; box-shadow: 0 4px 14px rgba(168, 200, 60, 0.3); }
+        .btn-green:hover { background: #bce045; box-shadow: 0 12px 24px rgba(168, 200, 60, 0.4); }
+
+        .btn-red { background: var(--brand-red); color: #fff; box-shadow: 0 4px 14px rgba(224, 78, 89, 0.3); }
+        .btn-red:hover { background: #c9444e; box-shadow: 0 12px 24px rgba(224, 78, 89, 0.4); }
+
+        .btn-yellow { background: var(--brand-yellow); color: #111; box-shadow: 0 4px 14px rgba(217, 162, 46, 0.3); }
+        .btn-yellow:hover { background: #b88824; color: #fff; box-shadow: 0 12px 24px rgba(217, 162, 46, 0.4); }
+
+        /* ==========================================
+           NAVBAR
+           ========================================== */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1rem 0;
+            transition: var(--trans);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        nav.scrolled {
+            padding: 0.8rem 0;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .nav-inner { display: flex; justify-content: space-between; align-items: center; }
+        .brand { display: flex; align-items: center; gap: 0.5rem; }
+        .brand img { height: 52px; width: auto; transition: var(--trans); }
+        .brand:hover img { transform: scale(1.02); }
+
+        .nav-links { display: flex; gap: 2rem; align-items: center; }
+        .nav-links a { color: var(--text-muted); font-weight: 500; font-size: 0.9rem; transition: var(--trans); }
+        .nav-links a:hover { color: var(--text-main); }
+
+        .btn-nav {
+            background: rgba(0, 0, 0, 0.04);
+            color: var(--text-main);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--trans);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-nav:hover { background: rgba(0, 0, 0, 0.08); }
+        .mobile-toggle { display: none; background: none; border: none; color: var(--text-main); font-size: 1.5rem; cursor: pointer; }
+
+        /* ==========================================
+           HERO SECTION
+           ========================================== */
+        .hero {
+            position: relative;
+            padding: 160px 0 100px 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Glows de los 3 colores */
+        .hero-glow-1 { position: absolute; top: -10%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(224, 78, 89, 0.12) 0%, transparent 70%); border-radius: 50%; z-index: -1; }
+        .hero-glow-2 { position: absolute; bottom: 10%; right: -5%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(168, 200, 60, 0.12) 0%, transparent 70%); border-radius: 50%; z-index: -1; }
+        .hero-glow-3 { position: absolute; top: 10%; right: 20%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(217, 162, 46, 0.12) 0%, transparent 70%); border-radius: 50%; z-index: -1; }
+
+        .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+
+        .hero-text h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; }
+        .hero-text p { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 2.5rem; max-width: 90%; line-height: 1.7; }
+
+        .hero-visual { position: relative; border-radius: var(--radius-lg); }
+        .hero-img-wrapper { position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05); }
+        .hero-img-wrapper::after { content: ''; position: absolute; inset: 0; border: 1px solid rgba(0, 0, 0, 0.08); border-radius: var(--radius-lg); pointer-events: none; }
+        .hero-img { width: 100%; height: 600px; object-fit: cover; display: block; }
+
+        .float-badge {
+            position: absolute; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 0, 0, 0.05); padding: 1rem 1.5rem; border-radius: var(--radius-md);
+            display: flex; align-items: center; gap: 1rem; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .fb-1 { top: 40px; left: -40px; }
+        .fb-2 { bottom: 60px; right: -30px; animation-delay: 2s; }
+        .fb-icon { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
+        .fb-icon.red { background: rgba(224, 78, 89, 0.2); color: var(--brand-red); }
+        .fb-icon.yellow { background: rgba(217, 162, 46, 0.2); color: var(--brand-yellow); }
+
+        .fb-text h4 { font-size: 0.9rem; margin-bottom: 0.1rem; }
+        .fb-text p { font-size: 0.75rem; color: var(--text-muted); margin: 0; }
+
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+        /* ==========================================
+           CONTADORES DE CONFIANZA
+           ========================================== */
+        .counters {
+            padding: 80px 0;
+            background: var(--bg-surface-light);
+            color: var(--text-main);
+            text-align: center;
+            border-top: 1px solid rgba(0,0,0,0.03);
+            border-bottom: 1px solid rgba(0,0,0,0.03);
+        }
+        .count-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
+        .count-item h3 { font-size: 3.5rem; font-weight: 800; line-height: 1; margin-bottom: 0.5rem; }
+        .count-item p { font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.9rem; color: var(--text-muted); }
+
+        /* ==========================================
+           FRANJA DE CARACTERÍSTICAS
+           ========================================== */
+        .features-strip { background: var(--bg-darker); padding: 2rem 0; border-bottom: 1px solid rgba(0, 0, 0, 0.03); }
+        .features-grid { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem; }
+        .feat-item { display: flex; align-items: center; gap: 0.75rem; color: var(--text-muted); font-size: 0.9rem; font-weight: 500; }
+        .feat-item i { font-size: 1.2rem; }
+
+        /* ==========================================
+           SERVICIOS Y TARJETAS DINÁMICAS
+           ========================================== */
+        .services { padding: 100px 0; position: relative; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        
+        .service-card {
+            background: var(--bg-surface); border: 1px solid rgba(0, 0, 0, 0.04); border-radius: var(--radius-lg);
+            padding: 3rem 2.5rem; transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s ease, border-color 0.5s ease;
+            position: relative; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03); z-index: 1;
+        }
+
+        .sc-line { position: absolute; top: 0; left: 0; right: 0; height: 4px; }
+        .sc-line.red { background: var(--brand-red); }
+        .sc-line.yellow { background: var(--brand-yellow); }
+        .sc-line.green { background: var(--brand-green); }
+        .sc-line.gradient { background: var(--brand-gradient); }
+
+        /* Dinamismo por color de tarjeta */
+        .card-red:hover { transform: translateY(-12px) scale(1.02); border-color: rgba(224, 78, 89, 0.3); box-shadow: 0 25px 60px rgba(224, 78, 89, 0.12); }
+        .card-yellow:hover { transform: translateY(-12px) scale(1.02); border-color: rgba(217, 162, 46, 0.3); box-shadow: 0 25px 60px rgba(217, 162, 46, 0.12); }
+        .card-green:hover { transform: translateY(-12px) scale(1.02); border-color: rgba(168, 200, 60, 0.3); box-shadow: 0 25px 60px rgba(168, 200, 60, 0.12); }
+        .card-gradient:hover { transform: translateY(-12px) scale(1.02); border-color: rgba(0, 0, 0, 0.1); box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12); }
+
+        .sc-icon { width: 60px; height: 60px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin-bottom: 1.5rem; background: rgba(0, 0, 0, 0.03); transition: var(--trans);}
+        .service-card:hover .sc-icon { transform: scale(1.1); }
+
+        .service-card h3 { font-size: 1.35rem; margin-bottom: 0.75rem; position: relative; display: inline-block; }
+        .service-card h3::after { content: ''; position: absolute; left: 0; bottom: -4px; width: 0; height: 2px; transition: width 0.4s ease; }
+        
+        .card-red h3::after { background: var(--brand-red); }
+        .card-yellow h3::after { background: var(--brand-yellow); }
+        .card-green h3::after { background: var(--brand-green); }
+        .card-gradient h3::after { background: var(--brand-gradient); }
+        
+        .service-card:hover h3::after { width: 40px; }
+        .service-card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; }
+
+        /* ==========================================
+           NUESTRO EQUIPO (STAFF)
+           ========================================== */
+        .team { padding: 100px 0; background: var(--bg-surface-light); }
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+
+        .team-card {
+            background: var(--bg-surface); border: 1px solid rgba(0, 0, 0, 0.04); border-radius: var(--radius-lg);
+            padding: 3rem 2.5rem; transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03); position: relative; overflow: hidden;
+        }
+
+        .team-card.card-red:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(224, 78, 89, 0.08); border-color: rgba(224, 78, 89, 0.2); }
+        .team-card.card-yellow:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(217, 162, 46, 0.08); border-color: rgba(217, 162, 46, 0.2); }
+        .team-card.card-green:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(168, 200, 60, 0.08); border-color: rgba(168, 200, 60, 0.2); }
+        .team-card.card-gradient:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08); border-color: rgba(0, 0, 0, 0.1); }
+
+        .team-card h3 { font-size: 1.3rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
+        .team-card h3 i { font-size: 1.5rem; }
+        .team-list { list-style: none; display: grid; gap: 1.25rem; }
+        .team-member { display: flex; flex-direction: column; padding-bottom: 1.25rem; border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+        .team-member:last-child { border-bottom: none; padding-bottom: 0; }
+        .team-member strong { color: var(--text-main); font-size: 1.05rem; font-weight: 700; }
+        .badge-tag { display: inline-block; background: rgba(0, 0, 0, 0.04); color: var(--text-muted); padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem; margin-top: 0.3rem; width: fit-content; }
+        
+        /* Estilos mejorados para enlaces de WhatsApp en profesionales */
+        .member-phone { display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 500; color: var(--text-main); margin-top: 0.5rem; flex-wrap: wrap; }
+        .member-phone a { color: #0066cc; transition: var(--trans); text-decoration: none; position: relative; font-weight: 600; }
+        .member-phone a:hover { color: #004a99; }
+        .member-phone a::after { content: ''; position: absolute; left: 0; bottom: -2px; width: 0; height: 1px; background: #004a99; transition: width 0.3s ease; }
+        .member-phone a:hover::after { width: 100%; }
+
+        /* ==========================================
+           ALQUILER CONSULTORIOS
+           ========================================== */
+        .rentals { padding: 100px 0; background: var(--bg-darker); }
+        .rentals-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+        .rentals-visual { position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08); }
+        .rentals-visual img { width: 100%; height: auto; display: block; border-radius: var(--radius-lg); }
+        .benefits-list { list-style: none; margin-top: 2rem; display: grid; gap: 1.25rem; }
+        .b-item { display: flex; align-items: center; gap: 1rem; background: var(--bg-surface); padding: 1.25rem 1.5rem; border-radius: var(--radius-md); border: 1px solid rgba(0, 0, 0, 0.05); transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02); }
+        .b-item:hover { background: var(--bg-surface-light); transform: translateX(10px); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); }
+
+        /* Iconos de Beneficios intercalados en 3 colores */
+        .b-item:nth-child(3n+1) i { color: var(--brand-red); }
+        .b-item:nth-child(3n+2) i { color: var(--brand-yellow); }
+        .b-item:nth-child(3n) i { color: var(--brand-green); }
+
+        /* ==========================================
+           UBICACIÓN Y MAPA
+           ========================================== */
+        .location { padding: 100px 0; position: relative; }
+        .loc-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; background: var(--bg-surface); border-radius: var(--radius-lg); border: 1px solid rgba(0, 0, 0, 0.05); overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04); transition: transform 0.4s ease, box-shadow 0.4s ease; }
+        .loc-grid:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
+        .loc-info { padding: 3rem; display: flex; flex-direction: column; justify-content: center; gap: 2rem; }
+        .info-block h4 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+        .info-block p { color: var(--text-main); font-size: 1.1rem; font-weight: 500; }
+        .info-block span { display: block; color: var(--text-muted); font-size: 0.9rem; font-weight: 400; }
+        .loc-map { width: 100%; height: 100%; min-height: 400px; }
+        .loc-map iframe { width: 100%; height: 100%; border: none; filter: grayscale(20%) contrast(120%) opacity(0.9); }
+
+        /* ==========================================
+           FAQ
+           ========================================== */
+        .faq { padding: 100px 0; background: var(--bg-surface); }
+        .faq-container { max-width: 800px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid rgba(0, 0, 0, 0.05); margin-bottom: 1rem; }
+        .faq-question { width: 100%; display: flex; justify-content: space-between; align-items: center; background: none; border: none; padding: 1.5rem 0; font-size: 1.15rem; font-weight: 600; font-family: 'Inter', sans-serif; color: var(--text-main); cursor: pointer; text-align: left; transition: var(--trans); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; }
+        .faq-answer-inner { padding-bottom: 1.5rem; color: var(--text-muted); line-height: 1.7; }
+        .faq-item.active .faq-question i { transform: rotate(180deg); }
+        .faq-item.active .faq-answer { max-height: 300px; }
+        
+        /* Colores intercalados para iconos FAQ */
+        .faq-item:nth-child(3n+1) .faq-question i { color: var(--brand-green); }
+        .faq-item:nth-child(3n+2) .faq-question i { color: var(--brand-red); }
+        .faq-item:nth-child(3n) .faq-question i { color: var(--brand-yellow); }
+
+        /* ==========================================
+           CTA FINAL MEJORADO
+           ========================================== */
+        .cta-final {
+            padding: 100px 0;
+            text-align: center;
+            background: var(--text-main);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-final::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--brand-gradient);
+        }
+
+        .cta-final::before {
+            content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 600px; height: 600px; background: radial-gradient(circle, rgba(168, 200, 60, 0.15) 0%, transparent 60%);
+            z-index: 0; pointer-events: none;
+        }
+
+        .cta-inner { position: relative; z-index: 1; }
+        .cta-inner h2.sec-title { color: #FFFFFF; }
+        .cta-inner p.sec-desc { color: rgba(255, 255, 255, 0.8); }
+
+        .btn-cta-white { background: #FFFFFF; color: var(--text-main); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        .btn-cta-white:hover { background: var(--brand-green); color: #111; }
+
+        /* ==========================================
+           FOOTER 
+           ========================================== */
+        footer { background: #171f26; padding: 4rem 0 1.5rem 0; color: #FFFFFF; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1.5fr 1.5fr 1.5fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-logo-box { background: #FFFFFF; padding: 1rem; border-radius: var(--radius-sm); display: inline-block; margin-bottom: 1.5rem; }
+        .footer-logo-box img { height: 50px; display: block; }
+        .footer-col h4 { color: #FFFFFF; font-size: 1.15rem; margin-bottom: 1.5rem; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; }
+        .footer-col p, .footer-col a, .footer-col li span { color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; line-height: 1.7; transition: var(--trans); }
+        .footer-col a:hover { color: var(--brand-yellow); padding-left: 5px; }
+        .footer-col ul { list-style: none; padding: 0; }
+        .footer-col ul li { display: flex; align-items: flex-start; gap: 0.75rem; margin-bottom: 1rem; }
+        
+        .footer-col:nth-child(2) ul li i { color: var(--brand-red); margin-top: 0.2rem; }
+        .footer-col:nth-child(3) ul li i { color: var(--brand-yellow); margin-top: 0.2rem; }
+        .footer-col:nth-child(4) ul li i { color: var(--brand-green); margin-top: 0.2rem; }
+
+        .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .footer-bottom p { color: rgba(255, 255, 255, 0.5); font-size: 0.85rem; margin: 0; }
+
+        /* Responsividad */
+        @media (max-width: 992px) {
+            .hero-grid, .rentals-inner { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
+            .hero { padding: 120px 0 60px 0; }
+            .hero-text h1 { font-size: 3rem; }
+            .hero-text p { margin: 0 auto 2.5rem auto; }
+            .hero-img { height: 400px; }
+            .fb-1 { top: 20px; left: -10px; }
+            .fb-2 { bottom: 20px; right: -10px; }
+            .loc-grid { grid-template-columns: 1fr; }
+            .loc-info { padding: 2rem; text-align: center; }
+            .loc-map { min-height: 300px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .hero-glow-1, .hero-glow-2, .hero-glow-3 { display: none; }
+            .nav-links, .btn-nav { display: none; }
+            .mobile-toggle { display: block; }
+            .nav-links.active { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: var(--bg-surface); padding: 2rem; border-bottom: 1px solid rgba(0, 0, 0, 0.05); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); }
+            .hero { min-height: auto; }
+            .hero-text h1 { font-size: 2.5rem; }
+            .sec-title { font-size: 2.2rem; }
+            .features-grid { flex-direction: column; align-items: center; gap: 1rem; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+            .footer-col ul li { justify-content: center; text-align: center; }
+            .footer-bottom { justify-content: center; text-align: center; }
+            
+            /* Ajuste de espaciados para mobile (se le resta espacio en blanco innecesario) */
+            .services, .team, .rentals, .location, .faq, .cta-final { padding: 60px 0; }
+        }
+
+        @media (max-width: 480px) {
+            .float-badge { display: none; }
+            .hero-img { height: 300px; }
+            .btn-base { width: 100%; justify-content: center; }
+            
+            /* Ajuste extra de tamaño de botones en el footer o grids para pantallas muy pequeñas */
+            .count-item h3 { font-size: 3rem; }
+        }
+
+        /* ==========================================
+           EXTRAS (Flotantes, Lightbox)
+           ========================================== */
+        .wa-float { position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background-color: #25D366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); z-index: 999; animation: pulse-wa 2s infinite; transition: var(--trans); }
+        .wa-float:hover { transform: scale(1.1); background-color: #1ebe57; }
+        @keyframes pulse-wa { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); } 70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+
+        #btnTop { position: fixed; bottom: 30px; left: 30px; width: 45px; height: 45px; background: var(--bg-surface); color: var(--text-main); border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); cursor: pointer; z-index: 998; opacity: 0; visibility: hidden; transform: translateY(20px); transition: all 0.4s ease; }
+        #btnTop.show { opacity: 1; visibility: visible; transform: translateY(0); }
+        #btnTop:hover { background: var(--text-main); color: var(--bg-surface); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); }
+
+        .lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(5px); z-index: 2000; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease; }
+        .lightbox.active { opacity: 1; visibility: visible; }
+        .lightbox img { max-width: 90%; max-height: 90vh; border-radius: 8px; box-shadow: 0 15px 50px rgba(0,0,0,0.5); transform: scale(0.9); transition: transform 0.3s ease; }
+        .lightbox.active img { transform: scale(1); }
+        .lightbox-close { position: absolute; top: 30px; right: 30px; color: white; font-size: 2rem; cursor: pointer; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.1); border-radius: 50%; transition: background 0.2s ease; }
+        .lightbox-close:hover { background: rgba(255,255,255,0.25); }
+        .gallery-img { cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .gallery-img:hover { transform: scale(1.03); box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important; }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <div class="container nav-inner">
+            <a href="#" class="brand">
+                <img src="CEJUF%20LOGO%20PRINCIPAL%20PNG@300x.png" alt="CEJUF Consultorios">
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#servicios">Especialidades</a>
+                <a href="#equipo">Profesionales</a>
+                <a href="#alquiler">Consultorios</a>
+                <a href="#ubicacion">Ubicación</a>
+            </div>
+
+            <a href="https://wa.me/542964402962?text=Hola%20quiero%20consultar%20por%20CEJUF%20Consultorios"
+                target="_blank" rel="noopener" class="btn-nav">
+                <i class="fa-brands fa-whatsapp" style="color: var(--brand-green);"></i> Turnos
+            </a>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="hero-glow-1"></div>
+        <div class="hero-glow-2"></div>
+        <div class="hero-glow-3"></div>
+
+        <div class="container hero-grid">
+            <div class="hero-text reveal">
+                <div class="sec-tag tag-green">Centro de Salud en Río Grande</div>
+                <h1 style="line-height:1.2; font-size:3.2rem;">
+                    Centro de Salud Interdisciplinario<br>
+                    <span class="text-gradient-mix">CEJUF Consultorios</span> en Río Grande
+                </h1>
+                <p style="font-size:1.15rem; color:var(--text-main); font-weight:500;">Psicología • Psicopedagogía • Fonoaudiología</p>
+                <p style="margin-bottom:20px;color:var(--text-muted);font-weight:600;">
+                    📍 Estrada 1784, Río Grande
+                </p>
+
+                <a href="https://wa.me/542964402962?text=Hola%20quiero%20consultar%20por%20CEJUF%20Consultorios"
+                    target="_blank" rel="noopener" class="btn-base btn-green">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> Solicitar turno por WhatsApp
+                </a>
+
+                <div style="margin-top:20px;display:flex;gap:20px;flex-wrap:wrap;font-size:0.9rem;color:var(--text-muted);">
+                    <span><i class="fa-solid fa-check" style="color:var(--brand-red);"></i> Profesionales matriculados</span>
+                    <span><i class="fa-solid fa-check" style="color:var(--brand-yellow);"></i> Atención personalizada</span>
+                    <span><i class="fa-solid fa-check" style="color:var(--brand-green);"></i> Turnos rápidos</span>
+                </div>
+            </div>
+
+            <div class="hero-visual reveal" style="transition-delay: 200ms;">
+                <div class="hero-img-wrapper">
+                    <img src="ingreso.webp" alt="Consultorio CEJUF en Río Grande" class="hero-img">
+                </div>
+
+                <div class="float-badge fb-1">
+                    <div class="fb-icon red"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <div class="fb-text">
+                        <h4>Atención Integral</h4>
+                        <p>Diferentes especialidades</p>
+                    </div>
+                </div>
+
+                <div class="float-badge fb-2">
+                    <div class="fb-icon yellow"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="fb-text">
+                        <h4>Río Grande</h4>
+                        <p>Tierra del Fuego</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTADORES DE CONFIANZA -->
+    <section class="counters reveal">
+        <div class="container count-grid">
+            <div class="count-item">
+                <h3 class="counter-num text-gradient-red" data-target="15">0</h3>
+                <p>Profesionales</p>
+            </div>
+            <div class="count-item">
+                <h3 class="counter-num text-gradient-yellow" data-target="7">0</h3>
+                <p>Consultorios Equipados</p>
+            </div>
+            <div class="count-item">
+                <h3 class="counter-num text-gradient-green" data-target="100">+0</h3>
+                <p>Pacientes Satisfechos</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <div class="features-strip reveal">
+        <div class="container features-grid">
+            <div class="feat-item"><i class="fa-solid fa-user-doctor" style="color: var(--brand-red);"></i> Profesionales Capacitados</div>
+            <div class="feat-item"><i class="fa-regular fa-clock" style="color: var(--brand-yellow);"></i> Lunes a Sábado 09:00 a 21:00</div>
+            <div class="feat-item"><i class="fa-solid fa-mobile-screen-button" style="color: var(--brand-green);"></i> Turnos rápidos por WhatsApp</div>
+        </div>
+    </div>
+
+    <!-- SERVICIOS -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="reveal" style="text-align: center; margin-bottom: 4rem;">
+                <div class="sec-tag tag-red">Especialidades</div>
+                <h2 class="sec-title">Nuestros <span class="text-gradient-red">Servicios</span></h2>
+                <p class="sec-desc">Profesionales especializados en salud y desarrollo.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Card ROJA -->
+                <div class="service-card card-red reveal">
+                    <div class="sc-line red"></div>
+                    <div class="sc-icon" style="color: var(--brand-red);"><i class="fa-solid fa-brain"></i></div>
+                    <h3>Psicología</h3>
+                    <p>Acompañamiento terapéutico profesional para promover la salud mental, el autoconocimiento y el bienestar emocional integral.</p>
+                </div>
+
+                <!-- Card AMARILLA -->
+                <div class="service-card card-yellow reveal" style="transition-delay: 100ms;">
+                    <div class="sc-line yellow"></div>
+                    <div class="sc-icon" style="color: var(--brand-yellow);"><i class="fa-solid fa-puzzle-piece"></i></div>
+                    <h3>Psicopedagogía</h3>
+                    <p>Evaluación, diagnóstico y tratamiento de dificultades en el aprendizaje, estimulando el desarrollo cognitivo en todas las edades.</p>
+                </div>
+
+                <!-- Card VERDE -->
+                <div class="service-card card-green reveal" style="transition-delay: 200ms;">
+                    <div class="sc-line green"></div>
+                    <div class="sc-icon" style="color: var(--brand-green);"><i class="fa-solid fa-ear-listen"></i></div>
+                    <h3>Fonoaudiología</h3>
+                    <p>Abordaje especializado de alteraciones en la comunicación, el lenguaje, el habla, la voz y la audición.</p>
+                </div>
+
+                <!-- Card MULTICOLOR -->
+                <div class="service-card card-gradient reveal" style="transition-delay: 300ms;">
+                    <div class="sc-line gradient"></div>
+                    <div class="sc-icon"><i class="fa-solid fa-music text-gradient-mix"></i></div>
+                    <h3>Musicoterapia</h3>
+                    <p>Uso clínico y basado en evidencia de intervenciones musicales para lograr objetivos individualizados de rehabilitación.</p>
+                </div>
+            </div>
+
+            <div style="text-align:center;margin-top:50px;" class="reveal">
+                <a href="https://wa.me/542964402962?text=Hola%20quiero%20consultar%20por%20un%20turno%20o%20especialidad"
+                    target="_blank" rel="noopener" class="btn-base btn-green">
+                    <i class="fa-brands fa-whatsapp"></i> Consultar turno
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUESTRO EQUIPO (STAFF) -->
+    <section class="team" id="equipo">
+        <div class="container">
+            <div class="reveal" style="text-align: center; margin-bottom: 4rem;">
+                <div class="sec-tag tag-yellow">Nuestro Equipo</div>
+                <h2 class="sec-title">Profesionales a tu <span class="text-gradient-yellow">disposición</span></h2>
+                <p class="sec-desc">Equipo interdisciplinario especializado en salud mental, aprendizaje y rehabilitación.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 4rem;" class="reveal">
+                <img src="profesional1.webp" alt="Profesional CEJUF en sesión" class="gallery-img" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <img src="profesional2.webp" alt="Profesional CEJUF en sesión" class="gallery-img" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <img src="profesional3.webp" alt="Profesional CEJUF en sesión" class="gallery-img" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <img src="profesional4.webp" alt="Profesional CEJUF en sesión" class="gallery-img" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <img src="profesional5.webp" alt="Profesional CEJUF en sesión" class="gallery-img" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+            </div>
+
+            <div class="team-grid">
+                <!-- Psicología ROJO -->
+                <div class="team-card card-red reveal">
+                    <div class="sc-line red"></div>
+                    <h3 style="color: var(--brand-red);"><i class="fa-solid fa-brain"></i> Psicología</h3>
+                    <ul class="team-list">
+                        <li class="team-member">
+                            <strong>Ana Ferreyra</strong>
+                            <span class="badge-tag">Infantil</span>
+                            <div class="member-phone">
+                                <i class="fa-brands fa-whatsapp"></i> 
+                                <a href="https://wa.me/5492964402962" target="_blank" rel="noopener">2964 402962</a> / 
+                                <a href="https://wa.me/5492901640991" target="_blank" rel="noopener">+54 9 2901 640991</a>
+                            </div>
+                        </li>
+                        <li class="team-member">
+                            <strong>Axel Kieffer</strong>
+                            <span class="badge-tag">Adultos / Adolescentes / Niños</span>
+                            <div class="member-phone">
+                                <i class="fa-brands fa-whatsapp"></i> 
+                                <a href="https://wa.me/5492964480671" target="_blank" rel="noopener">2964 480671</a>
+                            </div>
+                        </li>
+                        <li class="team-member">
+                            <strong>Nicolás Dunayevich</strong>
+                            <span class="badge-tag">Adultos / Adolescentes</span>
+                            <div class="member-phone">
+                                <i class="fa-brands fa-whatsapp"></i> 
+                                <a href="https://wa.me/5493513773419" target="_blank" rel="noopener">351 3773419</a> / 
+                                <a href="https://wa.me/5492964402962" target="_blank" rel="noopener">2964 402962</a>
+                            </div>
+                        </li>
+                        <li class="team-member">
+                            <strong>Daiana Lamberti</strong>
+                            <span class="badge-tag">Adultos</span>
+                            <div class="member-phone">
+                                <i class="fa-brands fa-whatsapp"></i> 
+                                <a href="https://wa.me/5492964527981" target="_blank" rel="noopener">2964 527981</a>
+                            </div>
+                        </li>
+                        <li class="team-member">
+                            <strong>Daiana Di Benedetto</strong>
+                            <span class="badge-tag">Adultos</span>
+                            <div class="member-phone">
+                                <i class="fa-brands fa-whatsapp"></i> 
+                                <a href="https://wa.me/5492964402962" target="_blank" rel="noopener">2964 402962</a> / 
+                                <a href="https://wa.me/5493416971511" target="_blank" rel="noopener">+54 9 341 6971511</a>
+                            </div>
+                        </li>
+                        <li class="team-member">
+                            <strong>Ligia Ganduglia</strong>
+                            <span class="badge-tag">Adultos</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Psicopedagogía AMARILLO -->
+                <div class="team-card card-yellow reveal" style="transition-delay: 100ms;">
+                    <div class="sc-line yellow"></div>
+                    <h3 style="color: var(--brand-yellow);"><i class="fa-solid fa-puzzle-piece"></i> Psicopedagogía</h3>
+                    <ul class="team-list">
+                        <li class="team-member">
+                            <strong>Rocio Nahuelanca</strong>
+                            <div class="member-phone">
+                                <i class="fa-brands fa-whatsapp"></i> 
+                                <a href="https://wa.me/5492964573521" target="_blank" rel="noopener">2964 573521</a> / 
+                                <a href="https://wa.me/5492964402962" target="_blank" rel="noopener">2964 402962</a>
+                            </div>
+                        </li>
+                        <li class="team-member">
+                            <strong>Paola Valdez</strong>
+                            <div class="member-phone">
+                                <i class="fa-brands fa-whatsapp"></i> 
+                                <a href="https://wa.me/5492964528151" target="_blank" rel="noopener">2964 528151</a> / 
+                                <a href="https://wa.me/5492964402962" target="_blank" rel="noopener">2964 402962</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Fonoaudiología VERDE -->
+                <div class="team-card card-green reveal" style="transition-delay: 200ms;">
+                    <div class="sc-line green"></div>
+                    <h3 style="color: var(--brand-green);"><i class="fa-solid fa-ear-listen"></i> Fonoaudiología</h3>
+                    <ul class="team-list">
+                        <li class="team-member">
+                            <strong>Triana Aguirre</strong>
+                            <div class="member-phone">
+                                <i class="fa-brands fa-whatsapp"></i> 
+                                <a href="https://wa.me/5492964402962" target="_blank" rel="noopener">2964 402962</a> / 
+                                <a href="https://wa.me/5492964524081" target="_blank" rel="noopener">2964 524081</a>
+                            </div>
+                        </li>
+                        <li class="team-member">
+                            <strong>Aylen Maldonado</strong>
+                            <div class="member-phone">
+                                <i class="fa-brands fa-whatsapp"></i> 
+                                <a href="https://wa.me/5492964402962" target="_blank" rel="noopener">2964 402962</a>
+                            </div>
+                        </li>
+                        <li class="team-member">
+                            <strong>Geraldine Retamal</strong>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Otras Terapias GRADIENTE -->
+                <div class="team-card card-gradient reveal" style="transition-delay: 300ms;">
+                    <div class="sc-line gradient"></div>
+                    <h3><i class="fa-solid fa-hands-holding-child text-gradient-mix"></i> Terapias Especializadas</h3>
+                    <ul class="team-list">
+                        <li class="team-member">
+                            <strong>Florencia González</strong>
+                            <span class="badge-tag">Psicomotricista</span>
+                            <div class="member-phone">
+                                <i class="fa-brands fa-whatsapp"></i> 
+                                <a href="https://wa.me/5492964402962" target="_blank" rel="noopener">2964 402962</a>
+                            </div>
+                        </li>
+                        <li class="team-member">
+                            <strong>Ayelen Carpio</strong>
+                            <span class="badge-tag">Psicomotricista</span>
+                            <div class="member-phone">
+                                <i class="fa-brands fa-whatsapp"></i> 
+                                <a href="https://wa.me/5492964402962" target="_blank" rel="noopener">2964 402962</a>
+                            </div>
+                        </li>
+                        <li class="team-member">
+                            <strong>Alfonsina Mura</strong>
+                            <span class="badge-tag">Terapista Ocupacional</span>
+                            <div class="member-phone">
+                                <i class="fa-brands fa-whatsapp"></i> 
+                                <a href="https://wa.me/5492964402962" target="_blank" rel="noopener">2964 402962</a> / 
+                                <a href="https://wa.me/5492644831546" target="_blank" rel="noopener">264 4831546</a>
+                            </div>
+                        </li>
+                        <li class="team-member">
+                            <strong>Pilar Guzmán</strong>
+                            <span class="badge-tag">Musicoterapeuta</span>
+                            <div class="member-phone">
+                                <i class="fa-brands fa-whatsapp"></i> 
+                                <a href="https://wa.me/5492901483530" target="_blank" rel="noopener">2901 483530</a> / 
+                                <a href="https://wa.me/5492964402962" target="_blank" rel="noopener">2964 402962</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="text-align:center;margin-top:50px;" class="reveal">
+                <a href="https://wa.me/542964402962?text=Hola%20quiero%20consultar%20por%20un%20turno%20con%20un%20profesional"
+                    target="_blank" rel="noopener" class="btn-base btn-green">
+                    <i class="fa-brands fa-whatsapp"></i> Consultar turno
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ALQUILER DE CONSULTORIOS -->
+    <section class="rentals" id="alquiler">
+        <div class="container rentals-inner">
+            <div class="rentals-text reveal">
+                <div class="sec-tag tag-green">Para Profesionales</div>
+                <h2 class="sec-title">Consultorios en <span class="text-gradient-green">Alquiler</span></h2>
+                <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2rem;">
+                    Ofrecemos espacios cómodos, modernos y totalmente equipados para profesionales de la salud. Unite a
+                    nuestro equipo y disfrutá de un entorno de trabajo colaborativo.
+                </p>
+
+                <ul class="benefits-list">
+                    <li class="b-item">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Amplia y cómoda <strong>sala de espera</strong></span>
+                    </li>
+                    <li class="b-item">
+                        <i class="fa-solid fa-wifi"></i>
+                        <span>Conexión <strong>WiFi de alta velocidad</strong></span>
+                    </li>
+                    <li class="b-item">
+                        <i class="fa-solid fa-broom"></i>
+                        <span>Servicio de <strong>limpieza incluido</strong></span>
+                    </li>
+                    <li class="b-item">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>Cámaras de <strong>seguridad (24hs)</strong></span>
+                    </li>
+                    <li class="b-item">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        <span>Excelente <strong>ubicación céntrica</strong></span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="rentals-visual reveal" style="transition-delay: 200ms;">
+                <img src="consultorio.webp" loading="lazy"
+                    alt="Interior de un consultorio del centro de salud CEJUF en Río Grande">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE TURNOS DIRECTA -->
+    <section class="turnos-banner reveal" style="padding: 60px 0; border-top: 1px solid rgba(0,0,0,0.05);">
+        <div class="container" style="text-align: center;">
+            <h2 class="sec-title" style="font-size: 2.2rem; margin-bottom: 1rem;">Turnos por <span class="text-gradient-green">WhatsApp</span></h2>
+            <p class="sec-desc" style="margin-bottom: 2rem;">Escribinos y coordinamos tu turno rápidamente.</p>
+            <a href="https://wa.me/542964402962?text=Hola%20quiero%20consultar%20por%20CEJUF%20Consultorios"
+                target="_blank" rel="noopener" class="btn-base btn-green" style="padding: 1.2rem 2.5rem; font-size: 1.1rem;">
+                <i class="fa-brands fa-whatsapp text-2xl"></i> Solicitar Turno
+            </a>
+        </div>
+    </section>
+
+    <!-- GALERÍA DE FOTOS -->
+    <section class="gallery reveal" style="padding: 60px 0; background-color: var(--bg-surface-light);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <div class="sec-tag tag-red">Conocé CEJUF</div>
+                <h2 class="sec-title">Nuestras <span class="text-gradient-red">Instalaciones</span></h2>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                <img src="consultorio.webp" alt="Consultorio CEJUF" class="gallery-img" style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <img src="consultorio2.webp" alt="Consultorio CEJUF" class="gallery-img" style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <img src="consultorio3.webp" alt="Consultorio CEJUF" class="gallery-img" style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <img src="consultorio4.webp" alt="Consultorio CEJUF" class="gallery-img" style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+            </div>
+        </div>
+    </section>
+
+    <!-- UBICACIÓN -->
+    <section class="location" id="ubicacion">
+        <div class="container">
+            <div class="reveal" style="text-align: center; margin-bottom: 4rem;">
+                <div class="sec-tag tag-yellow">Contacto</div>
+                <h2 class="sec-title">Dónde <span class="text-gradient-yellow">Encontrarnos</span></h2>
+            </div>
+
+            <div class="loc-grid reveal">
+                <div class="loc-info">
+                    <div class="info-block">
+                        <h4 style="color: var(--brand-red);">Dirección</h4>
+                        <p>Estrada 1784</p>
+                        <span>Río Grande, Tierra del Fuego</span>
+                    </div>
+
+                    <div class="info-block">
+                        <h4 style="color: var(--brand-yellow);">Horarios</h4>
+                        <p>Lunes a Sábado</p>
+                        <span>09:00 a 21:00 hs</span>
+                    </div>
+
+                    <div class="info-block">
+                        <h4 style="color: var(--brand-green);">Atención Exclusiva</h4>
+                        <p>Solo vía WhatsApp</p>
+                        <span>Respondemos a la brevedad para coordinar tu turno.</span>
+                    </div>
+                </div>
+
+                <div class="loc-map">
+                    <iframe
+                        src="https://maps.google.com/maps?q=Estrada%201784,%20R%C3%ADo%20Grande,%20Tierra%20del%20Fuego&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES (FAQ) -->
+    <section class="faq">
+        <div class="container faq-container">
+            <div class="reveal" style="text-align: center; margin-bottom: 3rem;">
+                <div class="sec-tag tag-green">Respuestas</div>
+                <h2 class="sec-title">Preguntas <span class="text-gradient-green">Frecuentes</span></h2>
+                <p class="sec-desc">Todo lo que necesitas saber antes de tu primera consulta.</p>
+            </div>
+
+            <div class="faq-list reveal">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Cómo solicito un turno? <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Para solicitar un turno o realizar una consulta, simplemente debés escribirnos por WhatsApp
+                            al <a href="https://wa.me/542964402962" target="_blank" rel="noopener"
+                                style="color:var(--brand-green); font-weight:600;">+54 2964 402962</a>. Nuestro equipo
+                            de administración responderá a la brevedad coordinando día, horario y profesional adecuado
+                            para vos.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Cuáles son los horarios de atención? <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            El centro de salud se encuentra abierto de lunes a sábados, en horario corrido, de 09:00 a
+                            21:00 hs. Ten en cuenta que los horarios de cada especialista pueden variar dentro de esa
+                            franja.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Reciben Obras Sociales o Prepagas? <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            La modalidad de atención (particular, por reintegro, o cobertura de obra social) depende de
+                            los convenios de cada profesional. Cuando nos contactes por WhatsApp, indícanos si cuentas
+                            con alguna cobertura y te asesoramos específicamente.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Cuáles son las políticas de cancelación? <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            En caso de requerir re-programar o cancelar un turno ya asignado, te pedimos por favor que
+                            nos avises mediante un mensaje de WhatsApp con un mínimo de 24 horas de anticipación,
+                            permitiéndonos ofrecer ese valioso espacio a otro paciente.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL MEJORADO -->
+    <section class="cta-final">
+        <div class="container cta-inner reveal">
+            <div style="font-size: 0.85rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--brand-green); margin-bottom: 1rem;">
+                ¿Necesitás un profesional?
+            </div>
+            <h2 class="sec-title">Solicitá tu turno por <span class="text-gradient-green">WhatsApp</span></h2>
+            <p class="sec-desc">Escribinos para coordinar tu cita o consultar disponibilidad.</p>
+            <a href="https://wa.me/542964402962?text=Hola%20quiero%20consultar%20por%20CEJUF%20Consultorios"
+                target="_blank" rel="noopener" class="btn-base btn-cta-white" style="padding: 1.2rem 2.5rem; font-size: 1.1rem; border-radius: 50px;">
+                <i class="fa-brands fa-whatsapp text-2xl" style="color: var(--brand-green);"></i> Escribinos por WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER MEJORADO (Basado en la referencia) -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid reveal">
+                <!-- Columna 1: Branding -->
+                <div class="footer-col">
+                    <div class="footer-logo-box">
+                        <img src="CEJUF%20LOGO%20PRINCIPAL%20PNG@300x.png" alt="CEJUF Consultorios">
+                    </div>
+                    <p>Especialistas en salud mental, psicopedagogía y fonoaudiología. Brindando atención de calidad, humana y personalizada en Tierra del Fuego.</p>
+                </div>
+
+                <!-- Columna 2: Enlaces Rápidos -->
+                <div class="footer-col">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i> Inicio</a></li>
+                        <li><a href="#servicios"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i> Especialidades</a></li>
+                        <li><a href="#equipo"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i> Profesionales</a></li>
+                        <li><a href="#alquiler"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i> Consultorios</a></li>
+                        <li><a href="#ubicacion"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i> Ubicación</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Contacto -->
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>+54 9 2964 402962</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Estrada 1784<br>Río Grande, Tierra del Fuego<br>Argentina</span>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-instagram"></i>
+                            <span>@cejufconsultorios</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4: Medios de Pago y Horarios -->
+                <div class="footer-col">
+                    <h4>Atención y Pagos</h4>
+                    <ul>
+                        <li>
+                            <i class="fa-regular fa-clock"></i>
+                            <span>Lun a Sáb de 09:00 a 21:00 hs</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            <span>Efectivo</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            <span>Transferencia bancaria</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            <span>Obras sociales (Consultar)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> CEJUF Consultorios. Todos los derechos reservados.</p>
+                <p>Salud Integral &bull; Río Grande, Tierra del Fuego</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÓN VOLVER ARRIBA -->
+    <button id="btnTop" aria-label="Volver arriba" title="Ir arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-close" id="lightboxClose"><i class="fa-solid fa-xmark"></i></div>
+        <img src="" alt="Imagen ampliada" id="lightboxImg">
+    </div>
+
+    <!-- WHATSAPP FLOTANTE -->
+    <a href="https://wa.me/542964402962?text=Hola%20quiero%20consultar%20por%20CEJUF%20Consultorios" target="_blank"
+        rel="noopener" class="wa-float" title="Escribinos por WhatsApp" aria-label="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        // Efecto Navbar al hacer Scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Menú Móvil
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileToggle.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Cerrar menú móvil al hacer click en un link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileToggle.querySelector('i').classList.remove('fa-xmark');
+                mobileToggle.querySelector('i').classList.add('fa-bars');
+            });
+        });
+
+        // Animaciones de Aparición (Scroll Reveal)
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const revealOnScroll = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, revealOptions);
+
+        revealElements.forEach(el => {
+            revealOnScroll.observe(el);
+        });
+
+        // Acordeón de Preguntas Frecuentes (FAQ)
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+
+                item.classList.toggle('active');
+            });
+        });
+
+        // Botón Volver Arriba
+        const btnTop = document.getElementById('btnTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                btnTop.classList.add('show');
+            } else {
+                btnTop.classList.remove('show');
+            }
+        });
+
+        btnTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Contadores Animados Numericos
+        const counters = document.querySelectorAll('.counter-num');
+        const speed = 200; 
+
+        const counterObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const updateCount = () => {
+                        const target = +counter.getAttribute('data-target');
+                        const count = +counter.innerText.replace('+', '');
+                        const inc = target / speed;
+
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count + inc) + (counter.innerText.includes('+') ? '+' : '');
+                            setTimeout(updateCount, 15);
+                        } else {
+                            counter.innerText = target + (counter.getAttribute('data-target') == '100' ? '+' : '');
+                        }
+                    };
+                    
+                    if(counter.innerText === '0' || counter.innerText === '+0' || counter.innerText === '0+') {
+                        updateCount();
+                    }
+                    observer.unobserve(counter);
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
+
+        counters.forEach(counter => {
+            counterObserver.observe(counter);
+        });
+
+        // Lightbox para Galería
+        const galleryImages = document.querySelectorAll('.gallery-img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxClose = document.getElementById('lightboxClose');
+
+        galleryImages.forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden'; 
+            });
+        });
+
+        lightboxClose.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+    </script>
+</body>
+</html>
