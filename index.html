@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CEJUF Consultorios | Psicología, Psicopedagogía y Fonoaudiología en Río Grande</title>
+    <title>Psicólogos, Psicopedagogía y Fonoaudiología en Río Grande | CEJUF Consultorios</title>
     <meta name="description"
         content="Centro de salud en Río Grande, Tierra del Fuego. Psicología, Psicopedagogía, Fonoaudiología y Musicoterapia. Turnos rápidos por WhatsApp en CEJUF Consultorios.">
+    <meta name="keywords"
+        content="psicologo rio grande, psicopedagoga rio grande, fonoaudiologa rio grande, centro de salud rio grande, consultorio psicologia rio grande">
     <meta name="robots" content="index, follow">
     <meta name="author" content="CEJUF Consultorios">
     <meta name="geo.region" content="AR-V">
@@ -18,15 +20,19 @@
         content="Psicología, Psicopedagogía, Fonoaudiología y Musicoterapia en Río Grande. Turnos por WhatsApp.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_AR">
-    <meta property="og:image" content="https://tusitio.com/preview-cejuf.jpg">
+    <meta property="og:image" content="https://cejufconsultorios.com/preview-cejuf.jpg">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:url" content="https://tusitio.com">
+    <meta property="og:url" content="https://cejufconsultorios.com">
 
     <!-- Canonical & Theme Color -->
-    <link rel="canonical" href="https://tusitio.com">
+    <link rel="canonical" href="https://cejufconsultorios.com">
     <meta name="theme-color" content="#F4F6F7">
+
+    <!-- Meta tags para iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
     <!-- Preloads para mejorar LCP -->
     <link rel="preload" as="image" href="CEJUF%20LOGO%20SECUNDARIO.jpg">
@@ -34,6 +40,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="CEJUF%20ISOLOGO%20PNG@300x.png">
     <link rel="apple-touch-icon" href="CEJUF%20ISOLOGO%20PNG@300x.png">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
     <!-- Fuentes premium: Plus Jakarta Sans para títulos, Inter para textos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,14 +58,66 @@
      "@context": "https://schema.org",
      "@type": "MedicalBusiness",
      "name": "CEJUF Consultorios",
+     "image": "https://cejufconsultorios.com/ingreso.webp",
+     "telephone": "+542964402962",
      "address": {
        "@type": "PostalAddress",
        "streetAddress": "Estrada 1784",
        "addressLocality": "Río Grande",
        "addressRegion": "Tierra del Fuego",
+       "postalCode": "9420",
        "addressCountry": "AR"
      },
-     "telephone": "+542964402962"
+     "openingHours": "Mo-Sa 09:00-21:00",
+     "url": "https://cejufconsultorios.com"
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+     "@context": "https://schema.org",
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "¿Cómo solicito un turno?",
+       "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "Para solicitar un turno debes escribirnos por WhatsApp al +54 2964 402962."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "¿Cuáles son los horarios de atención?",
+       "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "El centro de salud atiende de lunes a sábado de 09:00 a 21:00."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "¿Atienden obras sociales?",
+       "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "La cobertura depende de cada profesional. Consultar por WhatsApp."
+       }
+      }
+     ]
+    }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+     "@context": "https://schema.org",
+     "@type": "BreadcrumbList",
+     "itemListElement": [{
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Inicio",
+       "item": "https://cejufconsultorios.com"
+     }]
     }
     </script>
 
@@ -96,6 +155,16 @@
         }
 
         /* ==========================================
+           AUTO-ZOOM PARA PANTALLAS GRANDES
+           ========================================== */
+        @media (min-width: 1440px) {
+            html { font-size: 18px; } /* Actúa como un zoom del 112.5% en pantallas anchas */
+        }
+        @media (min-width: 1920px) {
+            html { font-size: 20px; } /* Actúa como un zoom del 125% en monitores muy grandes */
+        }
+
+        /* ==========================================
            RESET Y BASE
            ========================================== */
         * {
@@ -121,7 +190,7 @@
 
         .container {
             width: 90%;
-            max-width: 1140px;
+            max-width: 1320px; /* Ampliado para ocupar mejor las pantallas de escritorio */
             margin: 0 auto;
         }
 
@@ -324,7 +393,7 @@
         .hero-visual { position: relative; border-radius: var(--radius-lg); }
         .hero-img-wrapper { position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05); }
         .hero-img-wrapper::after { content: ''; position: absolute; inset: 0; border: 1px solid rgba(0, 0, 0, 0.08); border-radius: var(--radius-lg); pointer-events: none; }
-        .hero-img { width: 100%; height: 600px; object-fit: cover; display: block; }
+        .hero-img { width: 100%; height: 700px; object-fit: cover; display: block; } /* Más alta para mayor impacto */
 
         .float-badge {
             position: absolute; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px);
@@ -567,6 +636,12 @@
             
             /* Ajuste de espaciados para mobile (se le resta espacio en blanco innecesario) */
             .services, .team, .rentals, .location, .faq, .cta-final { padding: 60px 0; }
+
+            /* Botón fijo inferior en mobile y ocultar flotante normal */
+            body { padding-bottom: 60px; }
+            .wa-float { display: none !important; }
+            .mobile-cta { display: flex !important; align-items: center; justify-content: center; gap: 10px; position: fixed; bottom: 0; left: 0; width: 100%; background: #25D366; color: white; padding: 18px; font-weight: 700; font-size: 1.1rem; z-index: 9999; box-shadow: 0 -4px 15px rgba(0,0,0,0.1); }
+            #btnTop { bottom: 80px; }
         }
 
         @media (max-width: 480px) {
@@ -581,6 +656,7 @@
         /* ==========================================
            EXTRAS (Flotantes, Lightbox)
            ========================================== */
+        .mobile-cta { display: none; text-decoration: none; }
         .wa-float { position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background-color: #25D366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); z-index: 999; animation: pulse-wa 2s infinite; transition: var(--trans); }
         .wa-float:hover { transform: scale(1.1); background-color: #1ebe57; }
         @keyframes pulse-wa { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); } 70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
@@ -616,12 +692,12 @@
                 <a href="#ubicacion">Ubicación</a>
             </div>
 
-            <a href="https://wa.me/542964402962?text=Hola%20quiero%20consultar%20por%20CEJUF%20Consultorios"
+            <a href="https://wa.me/5492964402962?text=Hola%20quiero%20solicitar%20un%20turno%20en%20CEJUF%20Consultorios"
                 target="_blank" rel="noopener" class="btn-nav">
                 <i class="fa-brands fa-whatsapp" style="color: var(--brand-green);"></i> Turnos
             </a>
 
-            <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú">
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú" aria-expanded="false">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
@@ -637,15 +713,15 @@
             <div class="hero-text reveal">
                 <div class="sec-tag tag-green">Centro de Salud en Río Grande</div>
                 <h1 style="line-height:1.2; font-size:3.2rem;">
-                    Centro de Salud Interdisciplinario<br>
-                    <span class="text-gradient-mix">CEJUF Consultorios</span> en Río Grande
+                    Psicología, Psicopedagogía y Fonoaudiología en Río Grande<br>
+                    <span class="text-gradient-mix">CEJUF Consultorios</span>
                 </h1>
                 <p style="font-size:1.15rem; color:var(--text-main); font-weight:500;">Psicología • Psicopedagogía • Fonoaudiología</p>
                 <p style="margin-bottom:20px;color:var(--text-muted);font-weight:600;">
                     📍 Estrada 1784, Río Grande
                 </p>
 
-                <a href="https://wa.me/542964402962?text=Hola%20quiero%20consultar%20por%20CEJUF%20Consultorios"
+                <a href="https://wa.me/5492964402962?text=Hola%20quiero%20solicitar%20un%20turno%20en%20CEJUF%20Consultorios"
                     target="_blank" rel="noopener" class="btn-base btn-green">
                     <i class="fa-brands fa-whatsapp text-xl"></i> Solicitar turno por WhatsApp
                 </a>
@@ -659,7 +735,7 @@
 
             <div class="hero-visual reveal" style="transition-delay: 200ms;">
                 <div class="hero-img-wrapper">
-                    <img src="ingreso.webp" alt="Consultorio CEJUF en Río Grande" class="hero-img">
+                    <img src="ingreso.webp" alt="Consultorio de CEJUF en Río Grande Tierra del Fuego" class="hero-img">
                 </div>
 
                 <div class="float-badge fb-1">
@@ -723,7 +799,8 @@
                     <div class="sc-line red"></div>
                     <div class="sc-icon" style="color: var(--brand-red);"><i class="fa-solid fa-brain"></i></div>
                     <h3>Psicología</h3>
-                    <p>Acompañamiento terapéutico profesional para promover la salud mental, el autoconocimiento y el bienestar emocional integral.</p>
+                    <p>Atención psicológica profesional en Río Grande, Tierra del Fuego. Acompañamiento terapéutico para adultos, adolescentes y niños.</p>
+                    <a href="https://wa.me/5492964402962?text=Hola%20quiero%20consultar%20por%20turno%20de%20psicolog%C3%ADa" target="_blank" rel="noopener" style="color: var(--brand-red); font-weight: 600; font-size: 0.9rem; margin-top: 1rem; display: inline-flex; align-items: center; gap: 5px;">Consultar especialidad <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
                 <!-- Card AMARILLA -->
@@ -731,7 +808,8 @@
                     <div class="sc-line yellow"></div>
                     <div class="sc-icon" style="color: var(--brand-yellow);"><i class="fa-solid fa-puzzle-piece"></i></div>
                     <h3>Psicopedagogía</h3>
-                    <p>Evaluación, diagnóstico y tratamiento de dificultades en el aprendizaje, estimulando el desarrollo cognitivo en todas las edades.</p>
+                    <p>Evaluación y tratamiento psicopedagógico en Río Grande para dificultades de aprendizaje en niños y adolescentes.</p>
+                    <a href="https://wa.me/5492964402962?text=Hola%20quiero%20consultar%20por%20turno%20de%20psicopedagog%C3%ADa" target="_blank" rel="noopener" style="color: var(--brand-yellow); font-weight: 600; font-size: 0.9rem; margin-top: 1rem; display: inline-flex; align-items: center; gap: 5px;">Consultar especialidad <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
                 <!-- Card VERDE -->
@@ -739,7 +817,8 @@
                     <div class="sc-line green"></div>
                     <div class="sc-icon" style="color: var(--brand-green);"><i class="fa-solid fa-ear-listen"></i></div>
                     <h3>Fonoaudiología</h3>
-                    <p>Abordaje especializado de alteraciones en la comunicación, el lenguaje, el habla, la voz y la audición.</p>
+                    <p>Fonoaudiología en Río Grande para trastornos del lenguaje, habla, comunicación y voz.</p>
+                    <a href="https://wa.me/5492964402962?text=Hola%20quiero%20consultar%20por%20turno%20de%20fonoaudiolog%C3%ADa" target="_blank" rel="noopener" style="color: var(--brand-green); font-weight: 600; font-size: 0.9rem; margin-top: 1rem; display: inline-flex; align-items: center; gap: 5px;">Consultar especialidad <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
                 <!-- Card MULTICOLOR -->
@@ -747,15 +826,9 @@
                     <div class="sc-line gradient"></div>
                     <div class="sc-icon"><i class="fa-solid fa-music text-gradient-mix"></i></div>
                     <h3>Musicoterapia</h3>
-                    <p>Uso clínico y basado en evidencia de intervenciones musicales para lograr objetivos individualizados de rehabilitación.</p>
+                    <p>Musicoterapia clínica en Río Grande, Tierra del Fuego. Intervenciones musicales para lograr objetivos de rehabilitación.</p>
+                    <a href="https://wa.me/5492964402962?text=Hola%20quiero%20consultar%20por%20turno%20de%20musicoterapia" target="_blank" rel="noopener" style="color: var(--text-main); font-weight: 600; font-size: 0.9rem; margin-top: 1rem; display: inline-flex; align-items: center; gap: 5px;">Consultar especialidad <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-            </div>
-
-            <div style="text-align:center;margin-top:50px;" class="reveal">
-                <a href="https://wa.me/542964402962?text=Hola%20quiero%20consultar%20por%20un%20turno%20o%20especialidad"
-                    target="_blank" rel="noopener" class="btn-base btn-green">
-                    <i class="fa-brands fa-whatsapp"></i> Consultar turno
-                </a>
             </div>
         </div>
     </section>
@@ -770,11 +843,11 @@
             </div>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 4rem;" class="reveal">
-                <img src="profesional1.webp" alt="Profesional CEJUF en sesión" class="gallery-img" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                <img src="profesional2.webp" alt="Profesional CEJUF en sesión" class="gallery-img" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                <img src="profesional3.webp" alt="Profesional CEJUF en sesión" class="gallery-img" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                <img src="profesional4.webp" alt="Profesional CEJUF en sesión" class="gallery-img" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                <img src="profesional5.webp" alt="Profesional CEJUF en sesión" class="gallery-img" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <img src="profesional1.webp" loading="lazy" alt="Psicóloga atendiendo paciente en consultorio en Río Grande" class="gallery-img" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <img src="profesional2.webp" loading="lazy" alt="Sesión de psicopedagogía infantil en Río Grande" class="gallery-img" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <img src="profesional3.webp" loading="lazy" alt="Tratamiento de fonoaudiología en Tierra del Fuego" class="gallery-img" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <img src="profesional4.webp" loading="lazy" alt="Profesionales de CEJUF Consultorios trabajando" class="gallery-img" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <img src="profesional5.webp" loading="lazy" alt="Atención interdisciplinaria en salud mental en Río Grande" class="gallery-img" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
             </div>
 
             <div class="team-grid">
@@ -783,8 +856,8 @@
                     <div class="sc-line red"></div>
                     <h3 style="color: var(--brand-red);"><i class="fa-solid fa-brain"></i> Psicología</h3>
                     <ul class="team-list">
-                        <li class="team-member">
-                            <strong>Ana Ferreyra</strong>
+                        <li class="team-member" itemscope itemtype="https://schema.org/Person">
+                            <strong itemprop="name">Ana Ferreyra</strong>
                             <span class="badge-tag">Infantil</span>
                             <div class="member-phone">
                                 <i class="fa-brands fa-whatsapp"></i> 
@@ -792,16 +865,16 @@
                                 <a href="https://wa.me/5492901640991" target="_blank" rel="noopener">+54 9 2901 640991</a>
                             </div>
                         </li>
-                        <li class="team-member">
-                            <strong>Axel Kieffer</strong>
+                        <li class="team-member" itemscope itemtype="https://schema.org/Person">
+                            <strong itemprop="name">Axel Kieffer</strong>
                             <span class="badge-tag">Adultos / Adolescentes / Niños</span>
                             <div class="member-phone">
                                 <i class="fa-brands fa-whatsapp"></i> 
                                 <a href="https://wa.me/5492964480671" target="_blank" rel="noopener">2964 480671</a>
                             </div>
                         </li>
-                        <li class="team-member">
-                            <strong>Nicolás Dunayevich</strong>
+                        <li class="team-member" itemscope itemtype="https://schema.org/Person">
+                            <strong itemprop="name">Nicolás Dunayevich</strong>
                             <span class="badge-tag">Adultos / Adolescentes</span>
                             <div class="member-phone">
                                 <i class="fa-brands fa-whatsapp"></i> 
@@ -809,16 +882,16 @@
                                 <a href="https://wa.me/5492964402962" target="_blank" rel="noopener">2964 402962</a>
                             </div>
                         </li>
-                        <li class="team-member">
-                            <strong>Daiana Lamberti</strong>
+                        <li class="team-member" itemscope itemtype="https://schema.org/Person">
+                            <strong itemprop="name">Daiana Lamberti</strong>
                             <span class="badge-tag">Adultos</span>
                             <div class="member-phone">
                                 <i class="fa-brands fa-whatsapp"></i> 
                                 <a href="https://wa.me/5492964527981" target="_blank" rel="noopener">2964 527981</a>
                             </div>
                         </li>
-                        <li class="team-member">
-                            <strong>Daiana Di Benedetto</strong>
+                        <li class="team-member" itemscope itemtype="https://schema.org/Person">
+                            <strong itemprop="name">Daiana Di Benedetto</strong>
                             <span class="badge-tag">Adultos</span>
                             <div class="member-phone">
                                 <i class="fa-brands fa-whatsapp"></i> 
@@ -826,8 +899,8 @@
                                 <a href="https://wa.me/5493416971511" target="_blank" rel="noopener">+54 9 341 6971511</a>
                             </div>
                         </li>
-                        <li class="team-member">
-                            <strong>Ligia Ganduglia</strong>
+                        <li class="team-member" itemscope itemtype="https://schema.org/Person">
+                            <strong itemprop="name">Ligia Ganduglia</strong>
                             <span class="badge-tag">Adultos</span>
                         </li>
                     </ul>
@@ -838,16 +911,16 @@
                     <div class="sc-line yellow"></div>
                     <h3 style="color: var(--brand-yellow);"><i class="fa-solid fa-puzzle-piece"></i> Psicopedagogía</h3>
                     <ul class="team-list">
-                        <li class="team-member">
-                            <strong>Rocio Nahuelanca</strong>
+                        <li class="team-member" itemscope itemtype="https://schema.org/Person">
+                            <strong itemprop="name">Rocio Nahuelanca</strong>
                             <div class="member-phone">
                                 <i class="fa-brands fa-whatsapp"></i> 
                                 <a href="https://wa.me/5492964573521" target="_blank" rel="noopener">2964 573521</a> / 
                                 <a href="https://wa.me/5492964402962" target="_blank" rel="noopener">2964 402962</a>
                             </div>
                         </li>
-                        <li class="team-member">
-                            <strong>Paola Valdez</strong>
+                        <li class="team-member" itemscope itemtype="https://schema.org/Person">
+                            <strong itemprop="name">Paola Valdez</strong>
                             <div class="member-phone">
                                 <i class="fa-brands fa-whatsapp"></i> 
                                 <a href="https://wa.me/5492964528151" target="_blank" rel="noopener">2964 528151</a> / 
@@ -862,23 +935,23 @@
                     <div class="sc-line green"></div>
                     <h3 style="color: var(--brand-green);"><i class="fa-solid fa-ear-listen"></i> Fonoaudiología</h3>
                     <ul class="team-list">
-                        <li class="team-member">
-                            <strong>Triana Aguirre</strong>
+                        <li class="team-member" itemscope itemtype="https://schema.org/Person">
+                            <strong itemprop="name">Triana Aguirre</strong>
                             <div class="member-phone">
                                 <i class="fa-brands fa-whatsapp"></i> 
                                 <a href="https://wa.me/5492964402962" target="_blank" rel="noopener">2964 402962</a> / 
                                 <a href="https://wa.me/5492964524081" target="_blank" rel="noopener">2964 524081</a>
                             </div>
                         </li>
-                        <li class="team-member">
-                            <strong>Aylen Maldonado</strong>
+                        <li class="team-member" itemscope itemtype="https://schema.org/Person">
+                            <strong itemprop="name">Aylen Maldonado</strong>
                             <div class="member-phone">
                                 <i class="fa-brands fa-whatsapp"></i> 
                                 <a href="https://wa.me/5492964402962" target="_blank" rel="noopener">2964 402962</a>
                             </div>
                         </li>
-                        <li class="team-member">
-                            <strong>Geraldine Retamal</strong>
+                        <li class="team-member" itemscope itemtype="https://schema.org/Person">
+                            <strong itemprop="name">Geraldine Retamal</strong>
                         </li>
                     </ul>
                 </div>
@@ -888,24 +961,24 @@
                     <div class="sc-line gradient"></div>
                     <h3><i class="fa-solid fa-hands-holding-child text-gradient-mix"></i> Terapias Especializadas</h3>
                     <ul class="team-list">
-                        <li class="team-member">
-                            <strong>Florencia González</strong>
+                        <li class="team-member" itemscope itemtype="https://schema.org/Person">
+                            <strong itemprop="name">Florencia González</strong>
                             <span class="badge-tag">Psicomotricista</span>
                             <div class="member-phone">
                                 <i class="fa-brands fa-whatsapp"></i> 
                                 <a href="https://wa.me/5492964402962" target="_blank" rel="noopener">2964 402962</a>
                             </div>
                         </li>
-                        <li class="team-member">
-                            <strong>Ayelen Carpio</strong>
+                        <li class="team-member" itemscope itemtype="https://schema.org/Person">
+                            <strong itemprop="name">Ayelen Carpio</strong>
                             <span class="badge-tag">Psicomotricista</span>
                             <div class="member-phone">
                                 <i class="fa-brands fa-whatsapp"></i> 
                                 <a href="https://wa.me/5492964402962" target="_blank" rel="noopener">2964 402962</a>
                             </div>
                         </li>
-                        <li class="team-member">
-                            <strong>Alfonsina Mura</strong>
+                        <li class="team-member" itemscope itemtype="https://schema.org/Person">
+                            <strong itemprop="name">Alfonsina Mura</strong>
                             <span class="badge-tag">Terapista Ocupacional</span>
                             <div class="member-phone">
                                 <i class="fa-brands fa-whatsapp"></i> 
@@ -913,8 +986,8 @@
                                 <a href="https://wa.me/5492644831546" target="_blank" rel="noopener">264 4831546</a>
                             </div>
                         </li>
-                        <li class="team-member">
-                            <strong>Pilar Guzmán</strong>
+                        <li class="team-member" itemscope itemtype="https://schema.org/Person">
+                            <strong itemprop="name">Pilar Guzmán</strong>
                             <span class="badge-tag">Musicoterapeuta</span>
                             <div class="member-phone">
                                 <i class="fa-brands fa-whatsapp"></i> 
@@ -924,13 +997,6 @@
                         </li>
                     </ul>
                 </div>
-            </div>
-
-            <div style="text-align:center;margin-top:50px;" class="reveal">
-                <a href="https://wa.me/542964402962?text=Hola%20quiero%20consultar%20por%20un%20turno%20con%20un%20profesional"
-                    target="_blank" rel="noopener" class="btn-base btn-green">
-                    <i class="fa-brands fa-whatsapp"></i> Consultar turno
-                </a>
             </div>
         </div>
     </section>
@@ -972,20 +1038,8 @@
 
             <div class="rentals-visual reveal" style="transition-delay: 200ms;">
                 <img src="consultorio.webp" loading="lazy"
-                    alt="Interior de un consultorio del centro de salud CEJUF en Río Grande">
+                    alt="Alquiler de consultorios equipados en Río Grande, Tierra del Fuego">
             </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN DE TURNOS DIRECTA -->
-    <section class="turnos-banner reveal" style="padding: 60px 0; border-top: 1px solid rgba(0,0,0,0.05);">
-        <div class="container" style="text-align: center;">
-            <h2 class="sec-title" style="font-size: 2.2rem; margin-bottom: 1rem;">Turnos por <span class="text-gradient-green">WhatsApp</span></h2>
-            <p class="sec-desc" style="margin-bottom: 2rem;">Escribinos y coordinamos tu turno rápidamente.</p>
-            <a href="https://wa.me/542964402962?text=Hola%20quiero%20consultar%20por%20CEJUF%20Consultorios"
-                target="_blank" rel="noopener" class="btn-base btn-green" style="padding: 1.2rem 2.5rem; font-size: 1.1rem;">
-                <i class="fa-brands fa-whatsapp text-2xl"></i> Solicitar Turno
-            </a>
         </div>
     </section>
 
@@ -997,10 +1051,10 @@
                 <h2 class="sec-title">Nuestras <span class="text-gradient-red">Instalaciones</span></h2>
             </div>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
-                <img src="consultorio.webp" alt="Consultorio CEJUF" class="gallery-img" style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                <img src="consultorio2.webp" alt="Consultorio CEJUF" class="gallery-img" style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                <img src="consultorio3.webp" alt="Consultorio CEJUF" class="gallery-img" style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                <img src="consultorio4.webp" alt="Consultorio CEJUF" class="gallery-img" style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <img src="consultorio.webp" loading="lazy" alt="Sala de espera del consultorio en Río Grande" class="gallery-img" style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <img src="consultorio2.webp" loading="lazy" alt="Consultorio de psicología iluminado en Tierra del Fuego" class="gallery-img" style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <img src="consultorio3.webp" loading="lazy" alt="Consultorio equipado para psicopedagogía en Río Grande" class="gallery-img" style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <img src="consultorio4.webp" loading="lazy" alt="Instalaciones modernas de CEJUF Consultorios" class="gallery-img" style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
             </div>
         </div>
     </section>
@@ -1036,7 +1090,7 @@
 
                 <div class="loc-map">
                     <iframe
-                        src="https://maps.google.com/maps?q=Estrada%201784,%20R%C3%ADo%20Grande,%20Tierra%20del%20Fuego&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        src="https://maps.google.com/maps?q=CEJUF%20Consultorios%20Rio%20Grande&t=&z=15&ie=UTF8&iwloc=&output=embed"
                         allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
@@ -1119,11 +1173,29 @@
             </div>
             <h2 class="sec-title">Solicitá tu turno por <span class="text-gradient-green">WhatsApp</span></h2>
             <p class="sec-desc">Escribinos para coordinar tu cita o consultar disponibilidad.</p>
-            <a href="https://wa.me/542964402962?text=Hola%20quiero%20consultar%20por%20CEJUF%20Consultorios"
+            <a href="https://wa.me/5492964402962?text=Hola%20quiero%20solicitar%20un%20turno%20en%20CEJUF%20Consultorios"
                 target="_blank" rel="noopener" class="btn-base btn-cta-white" style="padding: 1.2rem 2.5rem; font-size: 1.1rem; border-radius: 50px;">
                 <i class="fa-brands fa-whatsapp text-2xl" style="color: var(--brand-green);"></i> Escribinos por WhatsApp
             </a>
         </div>
+    </section>
+
+    <!-- SECCIÓN SEO LOCAL OCULTA (Indexable por Google) -->
+    <section style="display:none">
+        <h2>Psicólogos en Río Grande</h2>
+        <p>
+            En CEJUF Consultorios contamos con psicólogos en Río Grande especializados en atención para niños, adolescentes y adultos, brindando un espacio seguro de salud mental y bienestar emocional.
+        </p>
+
+        <h2>Psicopedagogía en Río Grande</h2>
+        <p>
+            Nuestro equipo de psicopedagogas en Río Grande trabaja en la evaluación, diagnóstico y tratamiento de dificultades de aprendizaje para fomentar el desarrollo cognitivo.
+        </p>
+
+        <h2>Fonoaudiología en Río Grande</h2>
+        <p>
+            Ofrecemos atención fonoaudiológica en Río Grande, Tierra del Fuego, para trastornos del lenguaje, habla, comunicación y rehabilitación vocal y auditiva.
+        </p>
     </section>
 
     <!-- FOOTER MEJORADO (Basado en la referencia) -->
@@ -1212,23 +1284,38 @@
         <img src="" alt="Imagen ampliada" id="lightboxImg">
     </div>
 
-    <!-- WHATSAPP FLOTANTE -->
-    <a href="https://wa.me/542964402962?text=Hola%20quiero%20consultar%20por%20CEJUF%20Consultorios" target="_blank"
+    <!-- WHATSAPP FLOTANTE (Desktop) -->
+    <a href="https://wa.me/5492964402962?text=Hola%20quiero%20solicitar%20un%20turno%20en%20CEJUF%20Consultorios" target="_blank"
         rel="noopener" class="wa-float" title="Escribinos por WhatsApp" aria-label="Contactar por WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- WHATSAPP FIJO INFERIOR (Mobile) -->
+    <a class="mobile-cta" href="https://wa.me/5492964402962?text=Hola%20quiero%20solicitar%20un%20turno%20en%20CEJUF%20Consultorios" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp text-xl"></i> Solicitar turno por WhatsApp
     </a>
 
     <!-- SCRIPTS -->
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
 
-        // Efecto Navbar al hacer Scroll
+        // Efecto Navbar y Botón Top al hacer Scroll unificado
         const navbar = document.getElementById('navbar');
+        const btnTop = document.getElementById('btnTop');
+        
         window.addEventListener('scroll', () => {
+            // Navbar
             if (window.scrollY > 50) {
                 navbar.classList.add('scrolled');
             } else {
                 navbar.classList.remove('scrolled');
+            }
+            
+            // Botón Volver Arriba
+            if (window.scrollY > 500) {
+                btnTop.classList.add('show');
+            } else {
+                btnTop.classList.remove('show');
             }
         });
 
@@ -1239,6 +1326,11 @@
         mobileToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             const icon = mobileToggle.querySelector('i');
+            
+            // Accesibilidad ARIA
+            const isExpanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+            mobileToggle.setAttribute('aria-expanded', !isExpanded);
+
             if (navLinks.classList.contains('active')) {
                 icon.classList.remove('fa-bars');
                 icon.classList.add('fa-xmark');
@@ -1252,6 +1344,7 @@
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
+                mobileToggle.setAttribute('aria-expanded', 'false');
                 mobileToggle.querySelector('i').classList.remove('fa-xmark');
                 mobileToggle.querySelector('i').classList.add('fa-bars');
             });
@@ -1294,17 +1387,6 @@
 
                 item.classList.toggle('active');
             });
-        });
-
-        // Botón Volver Arriba
-        const btnTop = document.getElementById('btnTop');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 500) {
-                btnTop.classList.add('show');
-            } else {
-                btnTop.classList.remove('show');
-            }
         });
 
         btnTop.addEventListener('click', () => {
