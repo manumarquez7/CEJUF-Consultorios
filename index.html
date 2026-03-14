@@ -28,7 +28,7 @@
     <link rel="canonical" href="https://cejufconsultorios.com">
     <meta name="theme-color" content="#E8EAED">
 
-    <meta name="color-scheme" content="light">
+    <meta name="color-scheme" content="light only">
     <meta name="supported-color-schemes" content="light">
 
     <!-- Meta tags para iOS -->
@@ -177,12 +177,20 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--bg-main);
-            color: var(--text-main);
+            background-color: #E8EAED !important;
+            color: #1F2933 !important;
             line-height: 1.6;
             overflow-x: hidden;
             word-wrap: break-word;
             overflow-wrap: break-word;
+        }
+
+        /* Bloqueo estricto para navegadores móviles con Auto-Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #E8EAED !important;
+                color: #1F2933 !important;
+            }
         }
 
         h1, h2, h3, h4 {
