@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Psicólogos, Psicopedagogía y Fonoaudiología en Río Grande | CEJUF Consultorios</title>
     <meta name="description"
-        content="Centro de salud en Río Grande, Tierra del Fuego. Psicología, Psicopedagogía, Fonoaudiología y Musicoterapia. Turnos rápidos por WhatsApp en CEJUF Consultorios.">
-    <meta name="keywords"
-        content="psicologo rio grande, psicopedagoga rio grande, fonoaudiologa rio grande, centro de salud rio grande, consultorio psicologia rio grande">
+        content="Centro de salud en Río Grande, Tierra del Fuego. Psicología, Psicopedagogía, Fonoaudiología, Psicomotricidad, Musicoterapia y Terapia Ocupacional. Turnos rápidos por WhatsApp en CEJUF Consultorios.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="CEJUF Consultorios">
     <meta name="geo.region" content="AR-V">
@@ -17,7 +15,7 @@
     <!-- Open Graph SEO -->
     <meta property="og:title" content="CEJUF Consultorios | Salud Integral en Río Grande">
     <meta property="og:description"
-        content="Psicología, Psicopedagogía, Fonoaudiología y Musicoterapia en Río Grande. Turnos por WhatsApp.">
+        content="Psicología, Psicopedagogía, Fonoaudiología, Psicomotricidad, Musicoterapia y Terapia Ocupacional en Río Grande. Turnos por WhatsApp.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_AR">
     <meta property="og:image" content="https://cejufconsultorios.com/preview-cejuf.jpg">
@@ -30,14 +28,14 @@
     <link rel="canonical" href="https://cejufconsultorios.com">
     <meta name="theme-color" content="#E8EAED">
 
-    <!-- Bloquear auto-dark mode de navegadores móviles para cuidar el diseño -->
-    <meta name="color-scheme" content="light only">
+    <meta name="color-scheme" content="light">
+    <meta name="supported-color-schemes" content="light">
 
     <!-- Meta tags para iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
-    <!-- Preloads para mejorar LCP -->
+    <!-- Preloads -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
     <link rel="preload" as="image" href="ingreso.webp" fetchpriority="high">
@@ -47,14 +45,12 @@
     <link rel="apple-touch-icon" href="CEJUF%20ISOLOGO%20PNG@300x.png">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
-    <!-- Fuentes premium: Plus Jakarta Sans para títulos, Inter para textos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap"
         rel="stylesheet">
 
-    <!-- FontAwesome para íconos nítidos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Schema Markup Local SEO -->
@@ -74,7 +70,17 @@
        "addressCountry": "AR"
      },
      "openingHours": "Mo-Sa 09:00-21:00",
-     "url": "https://cejufconsultorios.com"
+     "url": "https://cejufconsultorios.com",
+     "priceRange": "$$",
+     "areaServed": "Río Grande, Tierra del Fuego",
+     "sameAs": [
+       "https://instagram.com/cejufconsultorios"
+     ],
+     "medicalSpecialty": [
+       "Psychology",
+       "SpeechTherapy",
+       "OccupationalTherapy"
+     ]
     }
     </script>
 
@@ -127,14 +133,10 @@
     </script>
 
     <style>
-        /* ==========================================
-           FORZAR MODO CLARO Y BLOQUEAR AUTO-DARK
-           ========================================== */
         :root {
             color-scheme: light;
         }
 
-        /* Ocultamiento para SEO (Google lo lee, el usuario no) */
         .seo-hidden {
             position: absolute;
             left: -9999px;
@@ -148,77 +150,30 @@
             color-scheme: light;
         }
 
-        @media (prefers-color-scheme: dark) {
-
-            html,
-            body {
-                background: #E8EAED;
-                color: #1F2933;
-            }
-        }
-
-        /* ==========================================
-           VARIABLES DE DISEÑO (Basado en el brief)
-           ========================================== */
         :root {
-            /* Colores Base */
             --bg-main: #E8EAED;
-            /* Fondo principal un poco más gris */
             --bg-surface: #FFFFFF;
             --bg-surface-light: #F4F6F8;
-            /* Gris muy claro para contrastar */
             --bg-darker: #DFE3E7;
-            /* Gris un poco más oscuro para franjas */
-
-            /* Colores de Marca */
             --brand-red: #E04E59;
             --brand-yellow: #D9A22E;
             --brand-green: #A8C83C;
             --brand-gradient: linear-gradient(90deg, var(--brand-red), var(--brand-yellow), var(--brand-green));
-
-            /* Textos */
             --text-main: #1F2933;
             --text-muted: #5A6772;
             --text-dim: #9AA5B1;
-
-            /* Utilidades */
             --radius-lg: 24px;
             --radius-md: 16px;
             --radius-sm: 8px;
             --trans: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-            /* Sombras / Glows */
             --shadow-card: 0 15px 45px rgba(0, 0, 0, 0.08);
             --shadow-hover: 0 25px 60px rgba(0, 0, 0, 0.12);
         }
 
-        /* ==========================================
-           AUTO-ZOOM PARA PANTALLAS GRANDES
-           ========================================== */
-        @media (min-width: 1440px) {
-            html {
-                font-size: 18px;
-            }
+        @media (min-width: 1440px) { html { font-size: 18px; } }
+        @media (min-width: 1920px) { html { font-size: 20px; } }
 
-            /* Actúa como un zoom del 112.5% en pantallas anchas */
-        }
-
-        @media (min-width: 1920px) {
-            html {
-                font-size: 20px;
-            }
-
-            /* Actúa como un zoom del 125% en monitores muy grandes */
-        }
-
-        /* ==========================================
-           RESET Y BASE
-           ========================================== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Inter', sans-serif;
@@ -226,34 +181,24 @@
             color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
-            /* Evita que palabras muy largas rompan el diseño */
             word-wrap: break-word;
             overflow-wrap: break-word;
         }
 
-        h1,
-        h2,
-        h3,
-        h4 {
+        h1, h2, h3, h4 {
             font-family: 'Plus Jakarta Sans', sans-serif;
             line-height: 1.2;
             word-wrap: break-word;
         }
 
-        a {
-            text-decoration: none;
-        }
+        a { text-decoration: none; }
 
         .container {
             width: 90%;
             max-width: 1320px;
-            /* Ampliado para ocupar mejor las pantallas de escritorio */
             margin: 0 auto;
         }
 
-        /* ==========================================
-           UTILIDADES DE COLOR COMPARTIDAS
-           ========================================== */
         .text-gradient-red {
             background: linear-gradient(135deg, var(--brand-red), #b93d47);
             -webkit-background-clip: text;
@@ -282,9 +227,6 @@
             display: inline-block;
         }
 
-        /* ==========================================
-           UTILIDADES (Tags, Títulos, Animaciones)
-           ========================================== */
         .sec-tag {
             display: inline-flex;
             align-items: center;
@@ -309,7 +251,6 @@
             background: rgba(0, 0, 0, 0.05);
         }
 
-        /* Modificadores de Tag */
         .sec-tag.tag-red::before {
             content: '';
             width: 8px;
@@ -362,9 +303,6 @@
             transform: translateY(0);
         }
 
-        /* ==========================================
-           BOTONES MULTICOLOR
-           ========================================== */
         .btn-base {
             display: inline-flex;
             align-items: center;
@@ -391,15 +329,9 @@
             z-index: 1;
         }
 
-        .btn-base:hover::before {
-            left: 100%;
-        }
+        .btn-base:hover::before { left: 100%; }
+        .btn-base:hover { transform: translateY(-3px); }
 
-        .btn-base:hover {
-            transform: translateY(-3px);
-        }
-
-        /* Variantes de Botones */
         .btn-green {
             background: var(--brand-green);
             color: #111;
@@ -434,9 +366,7 @@
             box-shadow: 0 12px 24px rgba(217, 162, 46, 0.4);
         }
 
-        /* ==========================================
-           NAVBAR
-           ========================================== */
+        /* NAVBAR */
         nav {
             position: fixed;
             top: 0;
@@ -463,38 +393,18 @@
             align-items: center;
         }
 
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
+        .brand { display: flex; align-items: center; gap: 0.5rem; }
+        .brand img { height: 75px; width: auto; transition: var(--trans); }
+        .brand:hover img { transform: scale(1.02); }
 
-        .brand img {
-            height: 52px;
-            width: auto;
-            transition: var(--trans);
-        }
-
-        .brand:hover img {
-            transform: scale(1.02);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-
+        .nav-links { display: flex; gap: 2rem; align-items: center; }
         .nav-links a {
             color: var(--text-muted);
             font-weight: 500;
             font-size: 0.9rem;
             transition: var(--trans);
         }
-
-        .nav-links a:hover {
-            color: var(--text-main);
-        }
+        .nav-links a:hover { color: var(--text-main); }
 
         .btn-nav {
             background: rgba(0, 0, 0, 0.04);
@@ -508,10 +418,7 @@
             align-items: center;
             gap: 0.5rem;
         }
-
-        .btn-nav:hover {
-            background: rgba(0, 0, 0, 0.08);
-        }
+        .btn-nav:hover { background: rgba(0, 0, 0, 0.08); }
 
         .mobile-toggle {
             display: none;
@@ -522,54 +429,35 @@
             cursor: pointer;
         }
 
-        /* ==========================================
-           HERO SECTION
-           ========================================== */
+        /* HERO */
         .hero {
             position: relative;
             padding: 160px 0 100px 0;
             min-height: 100vh;
             min-height: 100dvh;
-            /* Dynamic Viewport Height para móviles */
             display: flex;
             align-items: center;
             overflow: hidden;
             z-index: 1;
-            /* Previene fondos negros por glows */
         }
 
-        /* Glows de los 3 colores */
         .hero-glow-1 {
-            position: absolute;
-            top: -10%;
-            left: -10%;
-            width: 500px;
-            height: 500px;
+            position: absolute; top: -10%; left: -10%;
+            width: 500px; height: 500px;
             background: radial-gradient(circle, rgba(224, 78, 89, 0.12) 0%, transparent 70%);
-            border-radius: 50%;
-            z-index: -1;
+            border-radius: 50%; z-index: -1;
         }
-
         .hero-glow-2 {
-            position: absolute;
-            bottom: 10%;
-            right: -5%;
-            width: 400px;
-            height: 400px;
+            position: absolute; bottom: 10%; right: -5%;
+            width: 400px; height: 400px;
             background: radial-gradient(circle, rgba(168, 200, 60, 0.12) 0%, transparent 70%);
-            border-radius: 50%;
-            z-index: -1;
+            border-radius: 50%; z-index: -1;
         }
-
         .hero-glow-3 {
-            position: absolute;
-            top: 10%;
-            right: 20%;
-            width: 300px;
-            height: 300px;
+            position: absolute; top: 10%; right: 20%;
+            width: 300px; height: 300px;
             background: radial-gradient(circle, rgba(217, 162, 46, 0.12) 0%, transparent 70%);
-            border-radius: 50%;
-            z-index: -1;
+            border-radius: 50%; z-index: -1;
         }
 
         .hero-grid {
@@ -579,7 +467,6 @@
             align-items: center;
         }
 
-        /* Título principal con tamaño dinámico y adaptable */
         .hero-text h1 {
             font-size: clamp(2rem, 5vw, 3.5rem);
             font-weight: 800;
@@ -594,6 +481,29 @@
             max-width: 90%;
             line-height: 1.7;
         }
+
+        /* Especialidades Pills en el Hero */
+        .hero-specialties {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .spec-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.4rem 0.9rem;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            border: 1.5px solid;
+        }
+
+        .spec-pill.red   { color: var(--brand-red);    border-color: rgba(224,78,89,0.3);   background: rgba(224,78,89,0.06); }
+        .spec-pill.yellow{ color: #b88824;              border-color: rgba(217,162,46,0.3);  background: rgba(217,162,46,0.06); }
+        .spec-pill.green { color: #6a9e16;              border-color: rgba(168,200,60,0.3);  background: rgba(168,200,60,0.06); }
 
         .hero-visual {
             position: relative;
@@ -623,8 +533,6 @@
             display: block;
         }
 
-        /* Más alta para mayor impacto */
-
         .float-badge {
             position: absolute;
             background: rgba(255, 255, 255, 0.9);
@@ -639,96 +547,28 @@
             animation: float 4s ease-in-out infinite;
         }
 
-        .fb-1 {
-            top: 40px;
-            left: -40px;
-        }
-
-        .fb-2 {
-            bottom: 60px;
-            right: -30px;
-            animation-delay: 2s;
-        }
+        .fb-1 { top: 40px; left: -40px; }
+        .fb-2 { bottom: 60px; right: -30px; animation-delay: 2s; }
 
         .fb-icon {
-            width: 40px;
-            height: 40px;
+            width: 40px; height: 40px;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
             font-size: 1.2rem;
         }
 
-        .fb-icon.red {
-            background: rgba(224, 78, 89, 0.2);
-            color: var(--brand-red);
-        }
+        .fb-icon.red    { background: rgba(224, 78, 89, 0.2);  color: var(--brand-red); }
+        .fb-icon.yellow { background: rgba(217, 162, 46, 0.2); color: var(--brand-yellow); }
 
-        .fb-icon.yellow {
-            background: rgba(217, 162, 46, 0.2);
-            color: var(--brand-yellow);
-        }
-
-        .fb-text h4 {
-            font-size: 0.9rem;
-            margin-bottom: 0.1rem;
-        }
-
-        .fb-text p {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            margin: 0;
-        }
+        .fb-text h4 { font-size: 0.9rem; margin-bottom: 0.1rem; }
+        .fb-text p  { font-size: 0.75rem; color: var(--text-muted); margin: 0; }
 
         @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
+            0%, 100% { transform: translateY(0); }
+            50%        { transform: translateY(-10px); }
         }
 
-        /* ==========================================
-           CONTADORES DE CONFIANZA
-           ========================================== */
-        .counters {
-            padding: 80px 0;
-            background: var(--bg-surface-light);
-            color: var(--text-main);
-            text-align: center;
-            border-top: 1px solid rgba(0, 0, 0, 0.03);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.03);
-        }
-
-        .count-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-        }
-
-        .count-item h3 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            line-height: 1;
-            margin-bottom: 0.5rem;
-        }
-
-        .count-item p {
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-
-        /* ==========================================
-           FRANJA DE CARACTERÍSTICAS
-           ========================================== */
+        /* TRUST STRIP */
         .features-strip {
             background: var(--bg-darker);
             padding: 2rem 0;
@@ -751,13 +591,72 @@
             font-weight: 500;
         }
 
-        .feat-item i {
-            font-size: 1.2rem;
+        .feat-item i { font-size: 1.2rem; }
+
+        /* ESPECIALIDADES STRIP */
+        .specialties-strip {
+            padding: 70px 0;
+            background: var(--bg-surface-light);
+            border-top: 1px solid rgba(0,0,0,0.03);
+            border-bottom: 1px solid rgba(0,0,0,0.03);
+            text-align: center;
         }
 
-        /* ==========================================
-           SERVICIOS Y TARJETAS DINÁMICAS
-           ========================================== */
+        .specialties-strip h2 {
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+        }
+
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .spec-box {
+            background: var(--bg-surface);
+            border: 1px solid rgba(0,0,0,0.05);
+            border-radius: var(--radius-md);
+            padding: 1.75rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            transition: var(--trans);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .spec-box:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 32px rgba(0,0,0,0.08);
+        }
+
+        .spec-box i {
+            font-size: 1.8rem;
+        }
+
+        .spec-box span {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-main);
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        .spec-box:nth-child(1) i { color: var(--brand-red); }
+        .spec-box:nth-child(2) i { color: var(--brand-yellow); }
+        .spec-box:nth-child(3) i { color: var(--brand-green); }
+        .spec-box:nth-child(4) i { color: var(--brand-red); }
+        .spec-box:nth-child(5) i { color: var(--brand-yellow); }
+        .spec-box:nth-child(6) i { color: var(--brand-green); }
+
+        /* SERVICIOS */
         .services {
             padding: 100px 0;
             position: relative;
@@ -781,71 +680,28 @@
             z-index: 1;
         }
 
-        .sc-line {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-        }
+        .sc-line { position: absolute; top: 0; left: 0; right: 0; height: 4px; }
+        .sc-line.red      { background: var(--brand-red); }
+        .sc-line.yellow   { background: var(--brand-yellow); }
+        .sc-line.green    { background: var(--brand-green); }
+        .sc-line.gradient { background: var(--brand-gradient); }
 
-        .sc-line.red {
-            background: var(--brand-red);
-        }
-
-        .sc-line.yellow {
-            background: var(--brand-yellow);
-        }
-
-        .sc-line.green {
-            background: var(--brand-green);
-        }
-
-        .sc-line.gradient {
-            background: var(--brand-gradient);
-        }
-
-        /* Dinamismo por color de tarjeta */
-        .card-red:hover {
-            transform: translateY(-12px) scale(1.02);
-            border-color: rgba(224, 78, 89, 0.3);
-            box-shadow: 0 25px 60px rgba(224, 78, 89, 0.12);
-        }
-
-        .card-yellow:hover {
-            transform: translateY(-12px) scale(1.02);
-            border-color: rgba(217, 162, 46, 0.3);
-            box-shadow: 0 25px 60px rgba(217, 162, 46, 0.12);
-        }
-
-        .card-green:hover {
-            transform: translateY(-12px) scale(1.02);
-            border-color: rgba(168, 200, 60, 0.3);
-            box-shadow: 0 25px 60px rgba(168, 200, 60, 0.12);
-        }
-
-        .card-gradient:hover {
-            transform: translateY(-12px) scale(1.02);
-            border-color: rgba(0, 0, 0, 0.1);
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
-        }
+        .card-red:hover    { transform: translateY(-12px) scale(1.02); border-color: rgba(224,78,89,0.3);  box-shadow: 0 25px 60px rgba(224,78,89,0.12); }
+        .card-yellow:hover { transform: translateY(-12px) scale(1.02); border-color: rgba(217,162,46,0.3); box-shadow: 0 25px 60px rgba(217,162,46,0.12); }
+        .card-green:hover  { transform: translateY(-12px) scale(1.02); border-color: rgba(168,200,60,0.3); box-shadow: 0 25px 60px rgba(168,200,60,0.12); }
+        .card-gradient:hover { transform: translateY(-12px) scale(1.02); border-color: rgba(0,0,0,0.1); box-shadow: 0 25px 60px rgba(0,0,0,0.12); }
 
         .sc-icon {
-            width: 60px;
-            height: 60px;
+            width: 60px; height: 60px;
             border-radius: var(--radius-sm);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
             font-size: 1.8rem;
             margin-bottom: 1.5rem;
             background: rgba(0, 0, 0, 0.03);
             transition: var(--trans);
         }
 
-        .service-card:hover .sc-icon {
-            transform: scale(1.1);
-        }
+        .service-card:hover .sc-icon { transform: scale(1.1); }
 
         .service-card h3 {
             font-size: 1.35rem;
@@ -857,42 +713,21 @@
         .service-card h3::after {
             content: '';
             position: absolute;
-            left: 0;
-            bottom: -4px;
-            width: 0;
-            height: 2px;
+            left: 0; bottom: -4px;
+            width: 0; height: 2px;
             transition: width 0.4s ease;
         }
 
-        .card-red h3::after {
-            background: var(--brand-red);
-        }
+        .card-red h3::after      { background: var(--brand-red); }
+        .card-yellow h3::after   { background: var(--brand-yellow); }
+        .card-green h3::after    { background: var(--brand-green); }
+        .card-gradient h3::after { background: var(--brand-gradient); }
 
-        .card-yellow h3::after {
-            background: var(--brand-yellow);
-        }
+        .service-card:hover h3::after { width: 40px; }
 
-        .card-green h3::after {
-            background: var(--brand-green);
-        }
+        .service-card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; }
 
-        .card-gradient h3::after {
-            background: var(--brand-gradient);
-        }
-
-        .service-card:hover h3::after {
-            width: 40px;
-        }
-
-        .service-card p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-
-        /* ==========================================
-           NUESTRO EQUIPO (STAFF)
-           ========================================== */
+        /* EQUIPO */
         .team {
             padding: 100px 0;
             background: var(--bg-surface-light);
@@ -900,134 +735,98 @@
 
         .team-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 2rem;
+            align-items: start;
+        }
+
+        @media (max-width: 1100px) {
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .team-card {
             background: var(--bg-surface);
             border: 1px solid rgba(0, 0, 0, 0.04);
             border-radius: var(--radius-lg);
-            padding: 3rem 2.5rem;
+            padding: 2.2rem 1.5rem; /* Relleno lateral reducido para dar más espacio a los títulos */
             transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease, border-color 0.4s ease;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
             position: relative;
             overflow: hidden;
         }
 
-        .team-card.card-red:hover {
+        .team-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(224, 78, 89, 0.08);
-            border-color: rgba(224, 78, 89, 0.2);
+            box-shadow: 0 20px 45px rgba(0,0,0,0.08);
         }
 
-        .team-card.card-yellow:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(217, 162, 46, 0.08);
-            border-color: rgba(217, 162, 46, 0.2);
-        }
-
-        .team-card.card-green:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(168, 200, 60, 0.08);
-            border-color: rgba(168, 200, 60, 0.2);
-        }
-
-        .team-card.card-gradient:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-            border-color: rgba(0, 0, 0, 0.1);
-        }
+        .team-card.card-red:hover      { border-color: rgba(224,78,89,0.2); }
+        .team-card.card-yellow:hover   { border-color: rgba(217,162,46,0.2); }
+        .team-card.card-green:hover    { border-color: rgba(168,200,60,0.2); }
+        .team-card.card-gradient:hover { border-color: rgba(0,0,0,0.1); }
 
         .team-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.25rem; /* Fuente sutilmente más chica para palabras largas */
+            font-weight: 700;
+            margin-bottom: 1.6rem;
             display: flex;
-            align-items: center;
-            gap: 0.75rem;
+            align-items: flex-start;
+            gap: 0.65rem;
+            line-height: 1.2;
+            /* Se eliminó el word-break para evitar que los títulos se partan a la mitad */
         }
 
         .team-card h3 i {
             font-size: 1.5rem;
+            margin-top: 2px;
+            flex-shrink: 0;
         }
 
-        .team-list {
-            list-style: none;
-            display: grid;
-            gap: 1.25rem;
+        .team-list { 
+            list-style: none; 
+            display: grid; 
+            gap: 0; 
+            padding: 0; 
+            margin: 0; 
         }
 
         .team-member {
             display: flex;
             flex-direction: column;
-            padding-bottom: 1.25rem;
+            padding: 14px 0;
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            align-items: flex-start;
+            text-align: left;
         }
 
-        .team-member:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
+        .team-member:last-child { border-bottom: none; padding-bottom: 0; }
 
         .team-member strong {
             color: var(--text-main);
-            font-size: 1.05rem;
-            font-weight: 700;
+            font-size: 1rem;
+            font-weight: 600;
         }
 
         .badge-tag {
             display: inline-block;
-            background: rgba(0, 0, 0, 0.04);
-            color: var(--text-muted);
+            background: #f1f3f5;
+            color: #6b7280;
             padding: 0.2rem 0.6rem;
             border-radius: 4px;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             margin-top: 0.3rem;
             width: fit-content;
         }
 
-        /* Estilos mejorados para enlaces de WhatsApp en profesionales */
-        .member-phone {
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--text-main);
-            margin-top: 0.5rem;
-            flex-wrap: wrap;
-        }
-
-        .member-phone a {
-            color: #0066cc;
-            transition: var(--trans);
-            text-decoration: none;
-            position: relative;
-            font-weight: 600;
-        }
-
-        .member-phone a:hover {
-            color: #004a99;
-        }
-
-        .member-phone a::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -2px;
-            width: 0;
-            height: 1px;
-            background: #004a99;
-            transition: width 0.3s ease;
-        }
-
-        .member-phone a:hover::after {
-            width: 100%;
-        }
-
-        /* ==========================================
-           ALQUILER CONSULTORIOS
-           ========================================== */
+        /* ALQUILER */
         .rentals {
             padding: 100px 0;
             background: var(--bg-darker);
@@ -1054,12 +853,7 @@
             border-radius: var(--radius-lg);
         }
 
-        .benefits-list {
-            list-style: none;
-            margin-top: 2rem;
-            display: grid;
-            gap: 1.25rem;
-        }
+        .benefits-list { list-style: none; margin-top: 2rem; display: grid; gap: 1.25rem; }
 
         .b-item {
             display: flex;
@@ -1069,7 +863,7 @@
             padding: 1.25rem 1.5rem;
             border-radius: var(--radius-md);
             border: 1px solid rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
         }
 
@@ -1079,26 +873,12 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
         }
 
-        /* Iconos de Beneficios intercalados en 3 colores */
-        .b-item:nth-child(3n+1) i {
-            color: var(--brand-red);
-        }
+        .b-item:nth-child(3n+1) i { color: var(--brand-red); }
+        .b-item:nth-child(3n+2) i { color: var(--brand-yellow); }
+        .b-item:nth-child(3n) i   { color: var(--brand-green); }
 
-        .b-item:nth-child(3n+2) i {
-            color: var(--brand-yellow);
-        }
-
-        .b-item:nth-child(3n) i {
-            color: var(--brand-green);
-        }
-
-        /* ==========================================
-           UBICACIÓN Y MAPA
-           ========================================== */
-        .location {
-            padding: 100px 0;
-            position: relative;
-        }
+        /* UBICACIÓN */
+        .location { padding: 100px 0; position: relative; }
 
         .loc-grid {
             display: grid;
@@ -1112,10 +892,7 @@
             transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
 
-        .loc-grid:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hover);
-        }
+        .loc-grid:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
 
         .loc-info {
             padding: 3rem;
@@ -1132,49 +909,17 @@
             margin-bottom: 0.5rem;
         }
 
-        .info-block p {
-            color: var(--text-main);
-            font-size: 1.1rem;
-            font-weight: 500;
-        }
+        .info-block p { color: var(--text-main); font-size: 1.1rem; font-weight: 500; }
+        .info-block span { display: block; color: var(--text-muted); font-size: 0.9rem; font-weight: 400; }
 
-        .info-block span {
-            display: block;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            font-weight: 400;
-        }
+        .loc-map { width: 100%; height: 100%; min-height: 400px; }
+        .loc-map iframe { width: 100%; height: 100%; border: none; filter: grayscale(20%) contrast(120%) opacity(0.9); }
 
-        .loc-map {
-            width: 100%;
-            height: 100%;
-            min-height: 400px;
-        }
+        /* FAQ */
+        .faq { padding: 100px 0; background: var(--bg-surface); }
+        .faq-container { max-width: 800px; margin: 0 auto; }
 
-        .loc-map iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            filter: grayscale(20%) contrast(120%) opacity(0.9);
-        }
-
-        /* ==========================================
-           FAQ
-           ========================================== */
-        .faq {
-            padding: 100px 0;
-            background: var(--bg-surface);
-        }
-
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            margin-bottom: 1rem;
-        }
+        .faq-item { border-bottom: 1px solid rgba(0, 0, 0, 0.05); margin-bottom: 1rem; }
 
         .faq-question {
             width: 100%;
@@ -1193,42 +938,16 @@
             transition: var(--trans);
         }
 
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease, padding 0.4s ease;
-        }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; }
+        .faq-answer-inner { padding-bottom: 1.5rem; color: var(--text-muted); line-height: 1.7; }
+        .faq-item.active .faq-question i { transform: rotate(180deg); }
+        .faq-item.active .faq-answer { max-height: 300px; }
 
-        .faq-answer-inner {
-            padding-bottom: 1.5rem;
-            color: var(--text-muted);
-            line-height: 1.7;
-        }
+        .faq-item:nth-child(3n+1) .faq-question i { color: var(--brand-green); }
+        .faq-item:nth-child(3n+2) .faq-question i { color: var(--brand-red); }
+        .faq-item:nth-child(3n)   .faq-question i { color: var(--brand-yellow); }
 
-        .faq-item.active .faq-question i {
-            transform: rotate(180deg);
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 300px;
-        }
-
-        /* Colores intercalados para iconos FAQ */
-        .faq-item:nth-child(3n+1) .faq-question i {
-            color: var(--brand-green);
-        }
-
-        .faq-item:nth-child(3n+2) .faq-question i {
-            color: var(--brand-red);
-        }
-
-        .faq-item:nth-child(3n) .faq-question i {
-            color: var(--brand-yellow);
-        }
-
-        /* ==========================================
-           CTA FINAL MEJORADO
-           ========================================== */
+        /* CTA FINAL */
         .cta-final {
             padding: 100px 0;
             text-align: center;
@@ -1240,38 +959,25 @@
         .cta-final::after {
             content: '';
             position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
+            bottom: 0; left: 0;
+            width: 100%; height: 5px;
             background: var(--brand-gradient);
         }
 
         .cta-final::before {
             content: '';
             position: absolute;
-            top: 50%;
-            left: 50%;
+            top: 50%; left: 50%;
             transform: translate(-50%, -50%);
-            width: 600px;
-            height: 600px;
+            width: 600px; height: 600px;
             background: radial-gradient(circle, rgba(168, 200, 60, 0.15) 0%, transparent 60%);
             z-index: 0;
             pointer-events: none;
         }
 
-        .cta-inner {
-            position: relative;
-            z-index: 1;
-        }
-
-        .cta-inner h2.sec-title {
-            color: #FFFFFF;
-        }
-
-        .cta-inner p.sec-desc {
-            color: rgba(255, 255, 255, 0.8);
-        }
+        .cta-inner { position: relative; z-index: 1; }
+        .cta-inner h2.sec-title { color: #FFFFFF; }
+        .cta-inner p.sec-desc   { color: rgba(255, 255, 255, 0.8); }
 
         .btn-cta-white {
             background: #FFFFFF;
@@ -1279,19 +985,135 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
-        .btn-cta-white:hover {
-            background: var(--brand-green);
-            color: #111;
-        }
+        .btn-cta-white:hover { background: var(--brand-green); color: #111; }
 
-        /* ==========================================
-           FOOTER 
-           ========================================== */
-        footer {
-            background: #171f26;
-            padding: 4rem 0 1.5rem 0;
+        /* FORMULARIO DE TURNOS TIPO CARD */
+        .appointment-section {
+            padding: 100px 0;
+            background: var(--bg-main);
+        }
+        .appointment-card {
+            display: flex;
+            background: #FFFFFF;
+            border-radius: 24px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+            overflow: hidden;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .ac-left {
+            background: #0f1115; /* Fondo oscuro elegante */
+            color: #FFFFFF;
+            padding: 4rem 3rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .ac-left h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
             color: #FFFFFF;
         }
+        .ac-left p {
+            color: #9CA3AF;
+            font-size: 1.05rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+        .ac-benefits {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+        .ac-benefits li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #E5E7EB;
+        }
+        .ac-benefits li i {
+            background: rgba(37, 211, 102, 0.15);
+            color: #25D366;
+            width: 28px; height: 28px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.8rem;
+        }
+        .ac-right {
+            padding: 4rem 3rem;
+            flex: 1.2;
+            background: #FFFFFF;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: #6B7280;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            color: #1F2933;
+            transition: all 0.3s ease;
+            background: #FFFFFF;
+        }
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: #8b5cf6;
+            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+        }
+        .btn-wa-submit {
+            width: 100%;
+            padding: 1.2rem;
+            background: #25D366; /* Color verde */
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.25);
+        }
+        .btn-wa-submit:hover {
+            transform: translateY(-2px);
+            background: #1ebe57;
+            box-shadow: 0 15px 25px rgba(37, 211, 102, 0.35);
+        }
+        .secure-note {
+            text-align: center;
+            margin-top: 1.5rem;
+            font-size: 0.8rem;
+            color: #9CA3AF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+        }
+
+        /* FOOTER */
+        footer { background: #171f26; padding: 4rem 0 1.5rem 0; color: #FFFFFF; }
 
         .footer-grid {
             display: grid;
@@ -1308,10 +1130,7 @@
             margin-bottom: 1.5rem;
         }
 
-        .footer-logo-box img {
-            height: 50px;
-            display: block;
-        }
+        .footer-logo-box img { height: 50px; display: block; }
 
         .footer-col h4 {
             color: #FFFFFF;
@@ -1330,15 +1149,8 @@
             transition: var(--trans);
         }
 
-        .footer-col a:hover {
-            color: var(--brand-yellow);
-            padding-left: 5px;
-        }
-
-        .footer-col ul {
-            list-style: none;
-            padding: 0;
-        }
+        .footer-col a:hover { color: var(--brand-yellow); padding-left: 5px; }
+        .footer-col ul { list-style: none; padding: 0; }
 
         .footer-col ul li {
             display: flex;
@@ -1347,20 +1159,9 @@
             margin-bottom: 1rem;
         }
 
-        .footer-col:nth-child(2) ul li i {
-            color: var(--brand-red);
-            margin-top: 0.2rem;
-        }
-
-        .footer-col:nth-child(3) ul li i {
-            color: var(--brand-yellow);
-            margin-top: 0.2rem;
-        }
-
-        .footer-col:nth-child(4) ul li i {
-            color: var(--brand-green);
-            margin-top: 0.2rem;
-        }
+        .footer-col:nth-child(2) ul li i { color: var(--brand-red);    margin-top: 0.2rem; }
+        .footer-col:nth-child(3) ul li i { color: var(--brand-yellow); margin-top: 0.2rem; }
+        .footer-col:nth-child(4) ul li i { color: var(--brand-green);  margin-top: 0.2rem; }
 
         .footer-bottom {
             border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -1372,89 +1173,37 @@
             gap: 1rem;
         }
 
-        .footer-bottom p {
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 0.85rem;
-            margin: 0;
-        }
+        .footer-bottom p { color: rgba(255, 255, 255, 0.5); font-size: 0.85rem; margin: 0; }
 
-        /* Responsividad */
+        /* RESPONSIVE */
         @media (max-width: 992px) {
+            .hero-grid, .rentals-inner { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
+            .hero { padding: 120px 0 60px 0; }
+            .hero-text h1 { font-size: 3rem; }
+            .hero-text p { margin: 0 auto 2.5rem auto; }
+            .hero-specialties { justify-content: center; }
+            .hero-img { height: 400px; }
+            .fb-1 { top: 20px; left: -10px; }
+            .fb-2 { bottom: 20px; right: -10px; }
+            .loc-grid { grid-template-columns: 1fr; }
+            .loc-info { padding: 2rem; text-align: center; }
+            .loc-map { min-height: 300px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
 
-            .hero-grid,
-            .rentals-inner {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-                text-align: center;
-            }
-
-            .hero {
-                padding: 120px 0 60px 0;
-            }
-
-            .hero-text h1 {
-                font-size: 3rem;
-            }
-
-            .hero-text p {
-                margin: 0 auto 2.5rem auto;
-            }
-
-            .hero-img {
-                height: 400px;
-            }
-
-            .fb-1 {
-                top: 20px;
-                left: -10px;
-            }
-
-            .fb-2 {
-                bottom: 20px;
-                right: -10px;
-            }
-
-            .loc-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .loc-info {
-                padding: 2rem;
-                text-align: center;
-            }
-
-            .loc-map {
-                min-height: 300px;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
+            .appointment-card { flex-direction: column; }
+            .ac-left, .ac-right { padding: 3rem 2rem; }
         }
 
         @media (max-width: 768px) {
-
-            .hero-glow-1,
-            .hero-glow-2,
-            .hero-glow-3 {
-                display: none;
-            }
-
-            .nav-links,
-            .btn-nav {
-                display: none;
-            }
-
-            .mobile-toggle {
-                display: block;
-            }
+            .hero-glow-1, .hero-glow-2, .hero-glow-3 { display: none; }
+            .nav-links, .btn-nav { display: none; }
+            .mobile-toggle { display: block; }
 
             .nav-links.active {
                 display: flex;
                 flex-direction: column;
                 position: absolute;
-                top: 100%;
-                left: 0;
+                top: 100%; left: 0;
                 width: 100%;
                 background: var(--bg-surface);
                 padding: 2rem;
@@ -1463,59 +1212,18 @@
                 box-sizing: border-box;
             }
 
-            .hero {
-                min-height: auto;
-            }
+            .hero { min-height: auto; }
+            .hero-text h1 { font-size: clamp(1.8rem, 7vw, 2.4rem); line-height: 1.3; }
+            .sec-title { font-size: 2rem; }
+            .features-grid { flex-direction: column; align-items: center; gap: 1rem; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+            .footer-col ul li { justify-content: center; text-align: center; }
+            .footer-bottom { justify-content: center; text-align: center; }
 
-            /* Ajuste dinámico del H1 exclusivo para móviles */
-            .hero-text h1 {
-                font-size: clamp(1.8rem, 7vw, 2.4rem);
-                line-height: 1.3;
-            }
+            .services, .team, .rentals, .location, .faq, .cta-final { padding: 60px 0; }
 
-            .sec-title {
-                font-size: 2rem;
-            }
-
-            .features-grid {
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .footer-col ul li {
-                justify-content: center;
-                text-align: center;
-            }
-
-            .footer-bottom {
-                justify-content: center;
-                text-align: center;
-            }
-
-            /* Ajuste de espaciados para mobile (se le resta espacio en blanco innecesario) */
-            .services,
-            .team,
-            .rentals,
-            .location,
-            .faq,
-            .cta-final {
-                padding: 60px 0;
-            }
-
-            /* Botón fijo inferior en mobile y ocultar flotante normal */
-            body {
-                padding-bottom: 60px;
-            }
-
-            .wa-float {
-                display: none !important;
-            }
+            body { padding-bottom: 60px; }
+            .wa-float { display: none !important; }
 
             .mobile-cta {
                 display: flex !important;
@@ -1523,8 +1231,7 @@
                 justify-content: center;
                 gap: 10px;
                 position: fixed;
-                bottom: 0;
-                left: 0;
+                bottom: 0; left: 0;
                 width: 100%;
                 background: #25D366;
                 color: white;
@@ -1535,51 +1242,26 @@
                 box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
             }
 
-            #btnTop {
-                bottom: 80px;
-            }
+            #btnTop { bottom: 80px; }
         }
 
         @media (max-width: 480px) {
-            .float-badge {
-                display: none;
-            }
-
-            .hero-img {
-                height: 300px;
-            }
-
-            .btn-base {
-                width: 100%;
-                justify-content: center;
-            }
-
-            /* Ajuste extra de tamaño de botones en el footer o grids para pantallas muy pequeñas */
-            .count-item h3 {
-                font-size: 3rem;
-            }
+            .float-badge { display: none; }
+            .hero-img { height: 300px; }
+            .btn-base { width: 100%; justify-content: center; }
         }
 
-        /* ==========================================
-           EXTRAS (Flotantes, Lightbox)
-           ========================================== */
-        .mobile-cta {
-            display: none;
-            text-decoration: none;
-        }
+        /* EXTRAS */
+        .mobile-cta { display: none; text-decoration: none; }
 
         .wa-float {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
+            bottom: 30px; right: 30px;
+            width: 60px; height: 60px;
             background-color: #25D366;
             color: white;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
             font-size: 2rem;
             box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
             z-index: 999;
@@ -1587,38 +1269,23 @@
             transition: var(--trans);
         }
 
-        .wa-float:hover {
-            transform: scale(1.1);
-            background-color: #1ebe57;
-        }
+        .wa-float:hover { transform: scale(1.1); background-color: #1ebe57; }
 
         @keyframes pulse-wa {
-            0% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
-            }
-
-            70% {
-                box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
-            }
-
-            100% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-            }
+            0%   { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+            70%  { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
         #btnTop {
             position: fixed;
-            bottom: 30px;
-            left: 30px;
-            width: 45px;
-            height: 45px;
+            bottom: 30px; left: 30px;
+            width: 45px; height: 45px;
             background: var(--bg-surface);
             color: var(--text-main);
             border: 1px solid rgba(0, 0, 0, 0.1);
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
             font-size: 1.2rem;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             cursor: pointer;
@@ -1629,39 +1296,22 @@
             transition: all 0.4s ease;
         }
 
-        #btnTop.show {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        #btnTop:hover {
-            background: var(--text-main);
-            color: var(--bg-surface);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        }
+        #btnTop.show { opacity: 1; visibility: visible; transform: translateY(0); }
+        #btnTop:hover { background: var(--text-main); color: var(--bg-surface); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
 
         .lightbox {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             background: rgba(0, 0, 0, 0.85);
             backdrop-filter: blur(5px);
             z-index: 2000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            visibility: hidden;
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; visibility: hidden;
             transition: opacity 0.3s ease, visibility 0.3s ease;
         }
 
-        .lightbox.active {
-            opacity: 1;
-            visibility: visible;
-        }
+        .lightbox.active { opacity: 1; visibility: visible; }
 
         .lightbox img {
             max-width: 90%;
@@ -1672,40 +1322,29 @@
             transition: transform 0.3s ease;
         }
 
-        .lightbox.active img {
-            transform: scale(1);
-        }
+        .lightbox.active img { transform: scale(1); }
 
         .lightbox-close {
             position: absolute;
-            top: 30px;
-            right: 30px;
+            top: 30px; right: 30px;
             color: white;
             font-size: 2rem;
             cursor: pointer;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: 40px; height: 40px;
+            display: flex; align-items: center; justify-content: center;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             transition: background 0.2s ease;
         }
 
-        .lightbox-close:hover {
-            background: rgba(255, 255, 255, 0.25);
-        }
+        .lightbox-close:hover { background: rgba(255, 255, 255, 0.25); }
 
         .gallery-img {
             cursor: pointer;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .gallery-img:hover {
-            transform: scale(1.03);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
-        }
+        .gallery-img:hover { transform: scale(1.03); box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important; }
     </style>
 </head>
 
@@ -1745,13 +1384,21 @@
         <div class="container hero-grid">
             <div class="hero-text reveal">
                 <div class="sec-tag tag-green">Centro de Salud en Río Grande</div>
-                <!-- Se eliminó el style inline fijo que rompía el responsive -->
                 <h1>
-                    Psicología, Psicopedagogía y Fonoaudiología en Río Grande<br>
+                    Psicólogos, Psicopedagogía y Fonoaudiología en Río Grande<br>
                     <span class="text-gradient-mix">CEJUF Consultorios</span>
                 </h1>
-                <p style="font-size:1.15rem; color:var(--text-main); font-weight:500;">Psicología • Psicopedagogía •
-                    Fonoaudiología</p>
+
+                <!-- Pills de especialidades -->
+                <div class="hero-specialties">
+                    <span class="spec-pill red"><i class="fa-solid fa-brain"></i> Psicología</span>
+                    <span class="spec-pill yellow"><i class="fa-solid fa-puzzle-piece"></i> Psicopedagogía</span>
+                    <span class="spec-pill green"><i class="fa-solid fa-ear-listen"></i> Fonoaudiología</span>
+                    <span class="spec-pill red"><i class="fa-solid fa-child-reaching"></i> Psicomotricidad</span>
+                    <span class="spec-pill yellow"><i class="fa-solid fa-music"></i> Musicoterapia</span>
+                    <span class="spec-pill green"><i class="fa-solid fa-hands-holding-child"></i> Terapia Ocupacional</span>
+                </div>
+
                 <p style="margin-bottom:20px;color:var(--text-muted);font-weight:600;">
                     📍 Estrada 1784, Río Grande
                 </p>
@@ -1761,28 +1408,24 @@
                     <i class="fa-brands fa-whatsapp text-xl"></i> Solicitar turno por WhatsApp
                 </a>
 
-                <div
-                    style="margin-top:20px;display:flex;gap:20px;flex-wrap:wrap;font-size:0.9rem;color:var(--text-muted);">
-                    <span><i class="fa-solid fa-check" style="color:var(--brand-red);"></i> Profesionales
-                        matriculados</span>
-                    <span><i class="fa-solid fa-check" style="color:var(--brand-yellow);"></i> Atención
-                        personalizada</span>
+                <div style="margin-top:20px;display:flex;gap:20px;flex-wrap:wrap;font-size:0.9rem;color:var(--text-muted);">
+                    <span><i class="fa-solid fa-check" style="color:var(--brand-red);"></i> Profesionales matriculados</span>
+                    <span><i class="fa-solid fa-check" style="color:var(--brand-yellow);"></i> Atención personalizada</span>
                     <span><i class="fa-solid fa-check" style="color:var(--brand-green);"></i> Turnos rápidos</span>
                 </div>
             </div>
 
             <div class="hero-visual reveal" style="transition-delay: 200ms;">
                 <div class="hero-img-wrapper">
-                    <!-- Se quitó el srcset temporalmente para que vuelva a cargar tu imagen original -->
                     <img src="ingreso.webp" width="1200" height="700" fetchpriority="high" decoding="async"
-                        alt="Consultorio de CEJUF en Río Grande Tierra del Fuego" class="hero-img">
+                        alt="Centro de salud CEJUF Consultorios en Río Grande Tierra del Fuego" class="hero-img">
                 </div>
 
                 <div class="float-badge fb-1">
                     <div class="fb-icon red"><i class="fa-solid fa-heart-pulse"></i></div>
                     <div class="fb-text">
                         <h4>Atención Integral</h4>
-                        <p>Diferentes especialidades</p>
+                        <p>6 especialidades</p>
                     </div>
                 </div>
 
@@ -1797,33 +1440,12 @@
         </div>
     </header>
 
-    <!-- CONTADORES DE CONFIANZA -->
-    <section class="counters reveal">
-        <div class="container count-grid">
-            <div class="count-item">
-                <h3 class="counter-num text-gradient-red" data-target="15">0</h3>
-                <p>Profesionales</p>
-            </div>
-            <div class="count-item">
-                <h3 class="counter-num text-gradient-yellow" data-target="7">0</h3>
-                <p>Consultorios Equipados</p>
-            </div>
-            <div class="count-item">
-                <h3 class="counter-num text-gradient-green" data-target="100">+0</h3>
-                <p>Pacientes Satisfechos</p>
-            </div>
-        </div>
-    </section>
-
     <!-- TRUST STRIP -->
     <div class="features-strip reveal">
         <div class="container features-grid">
-            <div class="feat-item"><i class="fa-solid fa-user-doctor" style="color: var(--brand-red);"></i>
-                Profesionales Capacitados</div>
-            <div class="feat-item"><i class="fa-regular fa-clock" style="color: var(--brand-yellow);"></i> Lunes a
-                Sábado 09:00 a 21:00</div>
-            <div class="feat-item"><i class="fa-solid fa-mobile-screen-button" style="color: var(--brand-green);"></i>
-                Turnos rápidos por WhatsApp</div>
+            <div class="feat-item"><i class="fa-solid fa-user-doctor" style="color: var(--brand-red);"></i> Profesionales Capacitados</div>
+            <div class="feat-item"><i class="fa-regular fa-clock" style="color: var(--brand-yellow);"></i> Lunes a Sábado 09:00 a 21:00</div>
+            <div class="feat-item"><i class="fa-solid fa-mobile-screen-button" style="color: var(--brand-green);"></i> Turnos rápidos por WhatsApp</div>
         </div>
     </div>
 
@@ -1837,34 +1459,30 @@
             </div>
 
             <div class="services-grid">
-                <!-- Card ROJA -->
                 <div class="service-card card-red reveal">
                     <div class="sc-line red"></div>
                     <div class="sc-icon" style="color: var(--brand-red);"><i class="fa-solid fa-brain"></i></div>
                     <h3>Psicología</h3>
-                    <p>Atención psicológica profesional en Río Grande, Tierra del Fuego. Acompañamiento terapéutico para
-                        adultos, adolescentes y niños.</p>
+                    <p>Atención psicológica profesional en Río Grande, Tierra del Fuego. Acompañamiento terapéutico para adultos, adolescentes y niños.</p>
                     <a href="https://wa.me/5492964402962?text=Hola%20quiero%20consultar%20por%20turno%20de%20psicolog%C3%ADa"
                         target="_blank" rel="noopener"
-                        style="color: var(--brand-red); font-weight: 600; font-size: 0.9rem; margin-top: 1rem; display: inline-flex; align-items: center; gap: 5px;">Consultar
-                        especialidad <i class="fa-solid fa-arrow-right"></i></a>
+                        style="color: var(--brand-red); font-weight: 600; font-size: 0.9rem; margin-top: 1rem; display: inline-flex; align-items: center; gap: 5px;">
+                        Consultar especialidad <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
 
-                <!-- Card AMARILLA -->
                 <div class="service-card card-yellow reveal" style="transition-delay: 100ms;">
                     <div class="sc-line yellow"></div>
-                    <div class="sc-icon" style="color: var(--brand-yellow);"><i class="fa-solid fa-puzzle-piece"></i>
-                    </div>
+                    <div class="sc-icon" style="color: var(--brand-yellow);"><i class="fa-solid fa-puzzle-piece"></i></div>
                     <h3>Psicopedagogía</h3>
-                    <p>Evaluación y tratamiento psicopedagógico en Río Grande para dificultades de aprendizaje en niños
-                        y adolescentes.</p>
+                    <p>Evaluación y tratamiento psicopedagógico en Río Grande para dificultades de aprendizaje en niños y adolescentes.</p>
                     <a href="https://wa.me/5492964402962?text=Hola%20quiero%20consultar%20por%20turno%20de%20psicopedagog%C3%ADa"
                         target="_blank" rel="noopener"
-                        style="color: var(--brand-yellow); font-weight: 600; font-size: 0.9rem; margin-top: 1rem; display: inline-flex; align-items: center; gap: 5px;">Consultar
-                        especialidad <i class="fa-solid fa-arrow-right"></i></a>
+                        style="color: var(--brand-yellow); font-weight: 600; font-size: 0.9rem; margin-top: 1rem; display: inline-flex; align-items: center; gap: 5px;">
+                        Consultar especialidad <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
 
-                <!-- Card VERDE -->
                 <div class="service-card card-green reveal" style="transition-delay: 200ms;">
                     <div class="sc-line green"></div>
                     <div class="sc-icon" style="color: var(--brand-green);"><i class="fa-solid fa-ear-listen"></i></div>
@@ -1872,201 +1490,198 @@
                     <p>Fonoaudiología en Río Grande para trastornos del lenguaje, habla, comunicación y voz.</p>
                     <a href="https://wa.me/5492964402962?text=Hola%20quiero%20consultar%20por%20turno%20de%20fonoaudiolog%C3%ADa"
                         target="_blank" rel="noopener"
-                        style="color: var(--brand-green); font-weight: 600; font-size: 0.9rem; margin-top: 1rem; display: inline-flex; align-items: center; gap: 5px;">Consultar
-                        especialidad <i class="fa-solid fa-arrow-right"></i></a>
+                        style="color: var(--brand-green); font-weight: 600; font-size: 0.9rem; margin-top: 1rem; display: inline-flex; align-items: center; gap: 5px;">
+                        Consultar especialidad <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
 
-                <!-- Card MULTICOLOR -->
-                <div class="service-card card-gradient reveal" style="transition-delay: 300ms;">
+                <div class="service-card card-red reveal" style="transition-delay: 100ms;">
+                    <div class="sc-line red"></div>
+                    <div class="sc-icon" style="color: var(--brand-red);"><i class="fa-solid fa-child-reaching"></i></div>
+                    <h3>Psicomotricidad</h3>
+                    <p>Estimulación temprana y psicomotricidad en Río Grande. Intervención orientada al desarrollo motriz, cognitivo y emocional.</p>
+                    <a href="https://wa.me/5492964402962?text=Hola%20quiero%20consultar%20por%20turno%20de%20psicomotricidad"
+                        target="_blank" rel="noopener"
+                        style="color: var(--brand-red); font-weight: 600; font-size: 0.9rem; margin-top: 1rem; display: inline-flex; align-items: center; gap: 5px;">
+                        Consultar especialidad <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="service-card card-gradient reveal" style="transition-delay: 200ms;">
                     <div class="sc-line gradient"></div>
                     <div class="sc-icon"><i class="fa-solid fa-music text-gradient-mix"></i></div>
                     <h3>Musicoterapia</h3>
-                    <p>Musicoterapia clínica en Río Grande, Tierra del Fuego. Intervenciones musicales para lograr
-                        objetivos de rehabilitación.</p>
+                    <p>Musicoterapia clínica en Río Grande, Tierra del Fuego. Intervenciones musicales para lograr objetivos de rehabilitación.</p>
                     <a href="https://wa.me/5492964402962?text=Hola%20quiero%20consultar%20por%20turno%20de%20musicoterapia"
                         target="_blank" rel="noopener"
-                        style="color: var(--text-main); font-weight: 600; font-size: 0.9rem; margin-top: 1rem; display: inline-flex; align-items: center; gap: 5px;">Consultar
-                        especialidad <i class="fa-solid fa-arrow-right"></i></a>
+                        style="color: var(--text-main); font-weight: 600; font-size: 0.9rem; margin-top: 1rem; display: inline-flex; align-items: center; gap: 5px;">
+                        Consultar especialidad <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="service-card card-yellow reveal" style="transition-delay: 300ms;">
+                    <div class="sc-line yellow"></div>
+                    <div class="sc-icon" style="color: var(--brand-yellow);"><i class="fa-solid fa-hands-holding-child"></i></div>
+                    <h3>Terapia Ocupacional</h3>
+                    <p>Terapia ocupacional en Río Grande orientada a la autonomía funcional, integración sensorial y calidad de vida.</p>
+                    <a href="https://wa.me/5492964402962?text=Hola%20quiero%20consultar%20por%20turno%20de%20terapia%20ocupacional"
+                        target="_blank" rel="noopener"
+                        style="color: var(--brand-yellow); font-weight: 600; font-size: 0.9rem; margin-top: 1rem; display: inline-flex; align-items: center; gap: 5px;">
+                        Consultar especialidad <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- NUESTRO EQUIPO (STAFF) -->
+    <!-- NUESTRO EQUIPO -->
     <section class="team" id="equipo">
         <div class="container">
             <div class="reveal" style="text-align: center; margin-bottom: 4rem;">
                 <div class="sec-tag tag-yellow">Nuestro Equipo</div>
                 <h2 class="sec-title">Profesionales a tu <span class="text-gradient-yellow">disposición</span></h2>
-                <p class="sec-desc">Equipo interdisciplinario especializado en salud mental, aprendizaje y
-                    rehabilitación.</p>
+                <p class="sec-desc">Equipo de profesionales especializados en salud mental, aprendizaje y rehabilitación.</p>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 4rem;"
-                class="reveal">
-                <img src="profesional1.webp" loading="lazy"
-                    alt="Psicóloga atendiendo paciente en consultorio en Río Grande" class="gallery-img"
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 4rem;" class="reveal">
+                <img src="profesional1.webp" loading="lazy" alt="Psicóloga atendiendo paciente en consultorio en Río Grande" class="gallery-img"
                     style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                <img src="profesional2.webp" loading="lazy" alt="Sesión de psicopedagogía infantil en Río Grande"
-                    class="gallery-img"
+                <img src="profesional2.webp" loading="lazy" alt="Sesión de psicopedagogía infantil en Río Grande" class="gallery-img"
                     style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                <img src="profesional3.webp" loading="lazy" alt="Tratamiento de fonoaudiología en Tierra del Fuego"
-                    class="gallery-img"
+                <img src="profesional3.webp" loading="lazy" alt="Tratamiento de fonoaudiología en Tierra del Fuego" class="gallery-img"
                     style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                <img src="profesional4.webp" loading="lazy" alt="Profesionales de CEJUF Consultorios trabajando"
-                    class="gallery-img"
+                <img src="profesional4.webp" loading="lazy" alt="Profesionales de CEJUF Consultorios trabajando" class="gallery-img"
                     style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                <img src="profesional5.webp" loading="lazy"
-                    alt="Atención interdisciplinaria en salud mental en Río Grande" class="gallery-img"
+                <img src="profesional5.webp" loading="lazy" alt="Atención interdisciplinaria en salud mental en Río Grande" class="gallery-img"
                     style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
             </div>
 
             <div class="team-grid">
-                <!-- Psicología ROJO -->
+                <!-- Psicología Infantil y Adol. ROJO -->
                 <div class="team-card card-red reveal">
                     <div class="sc-line red"></div>
-                    <h3 style="color: var(--brand-red);"><i class="fa-solid fa-brain"></i> Psicología</h3>
+                    <h3 style="color: var(--brand-red);"><i class="fa-solid fa-brain"></i> Psicología Infantil</h3>
                     <ul class="team-list">
                         <li class="team-member" itemscope itemtype="https://schema.org/Person">
                             <strong itemprop="name">Ana Ferreyra</strong>
+                            <meta itemprop="jobTitle" content="Psicóloga Infantil">
                             <span class="badge-tag">Infantil</span>
-                            <div class="member-phone">
-                                <i class="fa-brands fa-whatsapp"></i>
-                                <a href="https://wa.me/5492964402962" target="_blank" rel="noopener">2964 402962</a> /
-                                <a href="https://wa.me/5492901640991" target="_blank" rel="noopener">+54 9 2901
-                                    640991</a>
-                            </div>
                         </li>
                         <li class="team-member" itemscope itemtype="https://schema.org/Person">
                             <strong itemprop="name">Axel Kieffer</strong>
+                            <meta itemprop="jobTitle" content="Psicólogo">
                             <span class="badge-tag">Adultos / Adolescentes / Niños</span>
-                            <div class="member-phone">
-                                <i class="fa-brands fa-whatsapp"></i>
-                                <a href="https://wa.me/5492964480671" target="_blank" rel="noopener">2964 480671</a>
-                            </div>
                         </li>
                         <li class="team-member" itemscope itemtype="https://schema.org/Person">
                             <strong itemprop="name">Nicolás Dunayevich</strong>
+                            <meta itemprop="jobTitle" content="Psicólogo">
                             <span class="badge-tag">Adultos / Adolescentes</span>
-                            <div class="member-phone">
-                                <i class="fa-brands fa-whatsapp"></i>
-                                <a href="https://wa.me/5493513773419" target="_blank" rel="noopener">351 3773419</a> /
-                                <a href="https://wa.me/5492964402962" target="_blank" rel="noopener">2964 402962</a>
-                            </div>
                         </li>
+                    </ul>
+                </div>
+
+                <!-- Psicología Adultos ROJO -->
+                <div class="team-card card-red reveal" style="transition-delay: 100ms;">
+                    <div class="sc-line red"></div>
+                    <h3 style="color: var(--brand-red);"><i class="fa-solid fa-brain"></i> Psicología Adultos</h3>
+                    <ul class="team-list">
                         <li class="team-member" itemscope itemtype="https://schema.org/Person">
                             <strong itemprop="name">Daiana Lamberti</strong>
+                            <meta itemprop="jobTitle" content="Psicóloga de Adultos">
                             <span class="badge-tag">Adultos</span>
-                            <div class="member-phone">
-                                <i class="fa-brands fa-whatsapp"></i>
-                                <a href="https://wa.me/5492964527981" target="_blank" rel="noopener">2964 527981</a>
-                            </div>
                         </li>
                         <li class="team-member" itemscope itemtype="https://schema.org/Person">
                             <strong itemprop="name">Daiana Di Benedetto</strong>
+                            <meta itemprop="jobTitle" content="Psicóloga de Adultos">
                             <span class="badge-tag">Adultos</span>
-                            <div class="member-phone">
-                                <i class="fa-brands fa-whatsapp"></i>
-                                <a href="https://wa.me/5492964402962" target="_blank" rel="noopener">2964 402962</a> /
-                                <a href="https://wa.me/5493416971511" target="_blank" rel="noopener">+54 9 341
-                                    6971511</a>
-                            </div>
                         </li>
                         <li class="team-member" itemscope itemtype="https://schema.org/Person">
                             <strong itemprop="name">Ligia Ganduglia</strong>
+                            <meta itemprop="jobTitle" content="Psicóloga de Adultos">
+                            <span class="badge-tag">Adultos</span>
+                        </li>
+                        <li class="team-member" itemscope itemtype="https://schema.org/Person">
+                            <strong itemprop="name">Silvia Mateos</strong>
+                            <meta itemprop="jobTitle" content="Psicóloga de Adultos">
                             <span class="badge-tag">Adultos</span>
                         </li>
                     </ul>
                 </div>
 
                 <!-- Psicopedagogía AMARILLO -->
-                <div class="team-card card-yellow reveal" style="transition-delay: 100ms;">
+                <div class="team-card card-yellow reveal" style="transition-delay: 200ms;">
                     <div class="sc-line yellow"></div>
-                    <h3 style="color: var(--brand-yellow);"><i class="fa-solid fa-puzzle-piece"></i> Psicopedagogía</h3>
+                    <h3 style="color: var(--brand-yellow);"><i class="fa-solid fa-puzzle-piece"></i> Psicopedagogos</h3>
                     <ul class="team-list">
                         <li class="team-member" itemscope itemtype="https://schema.org/Person">
                             <strong itemprop="name">Rocio Nahuelanca</strong>
-                            <div class="member-phone">
-                                <i class="fa-brands fa-whatsapp"></i>
-                                <a href="https://wa.me/5492964573521" target="_blank" rel="noopener">2964 573521</a> /
-                                <a href="https://wa.me/5492964402962" target="_blank" rel="noopener">2964 402962</a>
-                            </div>
+                            <meta itemprop="jobTitle" content="Psicopedagoga">
                         </li>
                         <li class="team-member" itemscope itemtype="https://schema.org/Person">
                             <strong itemprop="name">Paola Valdez</strong>
-                            <div class="member-phone">
-                                <i class="fa-brands fa-whatsapp"></i>
-                                <a href="https://wa.me/5492964528151" target="_blank" rel="noopener">2964 528151</a> /
-                                <a href="https://wa.me/5492964402962" target="_blank" rel="noopener">2964 402962</a>
-                            </div>
+                            <meta itemprop="jobTitle" content="Psicopedagoga">
                         </li>
                     </ul>
                 </div>
 
                 <!-- Fonoaudiología VERDE -->
-                <div class="team-card card-green reveal" style="transition-delay: 200ms;">
+                <div class="team-card card-green reveal" style="transition-delay: 300ms;">
                     <div class="sc-line green"></div>
-                    <h3 style="color: var(--brand-green);"><i class="fa-solid fa-ear-listen"></i> Fonoaudiología</h3>
+                    <h3 style="color: var(--brand-green);"><i class="fa-solid fa-ear-listen"></i> Fonoaudiólogos</h3>
                     <ul class="team-list">
                         <li class="team-member" itemscope itemtype="https://schema.org/Person">
                             <strong itemprop="name">Triana Aguirre</strong>
-                            <div class="member-phone">
-                                <i class="fa-brands fa-whatsapp"></i>
-                                <a href="https://wa.me/5492964402962" target="_blank" rel="noopener">2964 402962</a> /
-                                <a href="https://wa.me/5492964524081" target="_blank" rel="noopener">2964 524081</a>
-                            </div>
+                            <meta itemprop="jobTitle" content="Fonoaudióloga">
                         </li>
                         <li class="team-member" itemscope itemtype="https://schema.org/Person">
                             <strong itemprop="name">Aylen Maldonado</strong>
-                            <div class="member-phone">
-                                <i class="fa-brands fa-whatsapp"></i>
-                                <a href="https://wa.me/5492964402962" target="_blank" rel="noopener">2964 402962</a>
-                            </div>
+                            <meta itemprop="jobTitle" content="Fonoaudióloga">
                         </li>
                         <li class="team-member" itemscope itemtype="https://schema.org/Person">
                             <strong itemprop="name">Geraldine Retamal</strong>
+                            <meta itemprop="jobTitle" content="Fonoaudióloga">
                         </li>
                     </ul>
                 </div>
 
-                <!-- Otras Terapias GRADIENTE -->
-                <div class="team-card card-gradient reveal" style="transition-delay: 300ms;">
-                    <div class="sc-line gradient"></div>
-                    <h3><i class="fa-solid fa-hands-holding-child text-gradient-mix"></i> Terapias Especializadas</h3>
+                <!-- Psicomotricidad ROJO -->
+                <div class="team-card card-red reveal" style="transition-delay: 400ms;">
+                    <div class="sc-line red"></div>
+                    <h3 style="color: var(--brand-red);"><i class="fa-solid fa-child-reaching"></i> Psicomotricistas</h3>
                     <ul class="team-list">
                         <li class="team-member" itemscope itemtype="https://schema.org/Person">
                             <strong itemprop="name">Florencia González</strong>
-                            <span class="badge-tag">Psicomotricista</span>
-                            <div class="member-phone">
-                                <i class="fa-brands fa-whatsapp"></i>
-                                <a href="https://wa.me/5492964402962" target="_blank" rel="noopener">2964 402962</a>
-                            </div>
+                            <meta itemprop="jobTitle" content="Psicomotricista">
+                            <span class="badge-tag">Estimulación Temprana</span>
                         </li>
                         <li class="team-member" itemscope itemtype="https://schema.org/Person">
                             <strong itemprop="name">Ayelen Carpio</strong>
-                            <span class="badge-tag">Psicomotricista</span>
-                            <div class="member-phone">
-                                <i class="fa-brands fa-whatsapp"></i>
-                                <a href="https://wa.me/5492964402962" target="_blank" rel="noopener">2964 402962</a>
-                            </div>
+                            <meta itemprop="jobTitle" content="Psicomotricista">
+                            <span class="badge-tag">Estimulación Temprana</span>
                         </li>
-                        <li class="team-member" itemscope itemtype="https://schema.org/Person">
-                            <strong itemprop="name">Alfonsina Mura</strong>
-                            <span class="badge-tag">Terapista Ocupacional</span>
-                            <div class="member-phone">
-                                <i class="fa-brands fa-whatsapp"></i>
-                                <a href="https://wa.me/5492964402962" target="_blank" rel="noopener">2964 402962</a> /
-                                <a href="https://wa.me/5492644831546" target="_blank" rel="noopener">264 4831546</a>
-                            </div>
-                        </li>
+                    </ul>
+                </div>
+
+                <!-- Musicoterapia GRADIENTE -->
+                <div class="team-card card-gradient reveal" style="transition-delay: 500ms;">
+                    <div class="sc-line gradient"></div>
+                    <h3><i class="fa-solid fa-music text-gradient-mix"></i> Musicoterapia</h3>
+                    <ul class="team-list">
                         <li class="team-member" itemscope itemtype="https://schema.org/Person">
                             <strong itemprop="name">Pilar Guzmán</strong>
-                            <span class="badge-tag">Musicoterapeuta</span>
-                            <div class="member-phone">
-                                <i class="fa-brands fa-whatsapp"></i>
-                                <a href="https://wa.me/5492901483530" target="_blank" rel="noopener">2901 483530</a> /
-                                <a href="https://wa.me/5492964402962" target="_blank" rel="noopener">2964 402962</a>
-                            </div>
+                            <meta itemprop="jobTitle" content="Musicoterapeuta">
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Terapia Ocupacional AMARILLO -->
+                <div class="team-card card-yellow reveal" style="transition-delay: 600ms;">
+                    <div class="sc-line yellow"></div>
+                    <h3 style="color: var(--brand-yellow);"><i class="fa-solid fa-hands-holding-child"></i> Terapista Ocupacional</h3>
+                    <ul class="team-list">
+                        <li class="team-member" itemscope itemtype="https://schema.org/Person">
+                            <strong itemprop="name">Alfonsina Mura</strong>
+                            <meta itemprop="jobTitle" content="Terapista Ocupacional">
                         </li>
                     </ul>
                 </div>
@@ -2081,37 +1696,20 @@
                 <div class="sec-tag tag-green">Para Profesionales</div>
                 <h2 class="sec-title">Consultorios en <span class="text-gradient-green">Alquiler</span></h2>
                 <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2rem;">
-                    Ofrecemos espacios cómodos, modernos y totalmente equipados para profesionales de la salud. Unite a
-                    nuestro equipo y disfrutá de un entorno de trabajo colaborativo.
+                    Ofrecemos espacios cómodos, modernos y totalmente equipados para profesionales de la salud. Unite a nuestro equipo y disfrutá de un entorno de trabajo colaborativo.
                 </p>
 
                 <ul class="benefits-list">
-                    <li class="b-item">
-                        <i class="fa-solid fa-check"></i>
-                        <span>Amplia y cómoda <strong>sala de espera</strong></span>
-                    </li>
-                    <li class="b-item">
-                        <i class="fa-solid fa-wifi"></i>
-                        <span>Conexión <strong>WiFi de alta velocidad</strong></span>
-                    </li>
-                    <li class="b-item">
-                        <i class="fa-solid fa-broom"></i>
-                        <span>Servicio de <strong>limpieza incluido</strong></span>
-                    </li>
-                    <li class="b-item">
-                        <i class="fa-solid fa-shield-halved"></i>
-                        <span>Cámaras de <strong>seguridad (24hs)</strong></span>
-                    </li>
-                    <li class="b-item">
-                        <i class="fa-solid fa-map-location-dot"></i>
-                        <span>Excelente <strong>ubicación céntrica</strong></span>
-                    </li>
+                    <li class="b-item"><i class="fa-solid fa-check"></i><span>Amplia y cómoda <strong>sala de espera</strong></span></li>
+                    <li class="b-item"><i class="fa-solid fa-wifi"></i><span>Conexión <strong>WiFi de alta velocidad</strong></span></li>
+                    <li class="b-item"><i class="fa-solid fa-broom"></i><span>Servicio de <strong>limpieza incluido</strong></span></li>
+                    <li class="b-item"><i class="fa-solid fa-shield-halved"></i><span>Cámaras de <strong>seguridad (24hs)</strong></span></li>
+                    <li class="b-item"><i class="fa-solid fa-map-location-dot"></i><span>Excelente <strong>ubicación céntrica</strong></span></li>
                 </ul>
             </div>
 
             <div class="rentals-visual reveal" style="transition-delay: 200ms;">
-                <img src="consultorio.webp" loading="lazy"
-                    alt="Alquiler de consultorios equipados en Río Grande, Tierra del Fuego">
+                <img src="consultorio.webp" loading="lazy" alt="Alquiler de consultorios equipados en Río Grande, Tierra del Fuego">
             </div>
         </div>
     </section>
@@ -2124,17 +1722,13 @@
                 <h2 class="sec-title">Nuestras <span class="text-gradient-red">Instalaciones</span></h2>
             </div>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
-                <img src="consultorio.webp" loading="lazy" alt="Sala de espera del consultorio en Río Grande"
-                    class="gallery-img"
+                <img src="consultorio.webp" loading="lazy" alt="Sala de espera del consultorio en Río Grande" class="gallery-img"
                     style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                <img src="consultorio2.webp" loading="lazy"
-                    alt="Consultorio de psicología iluminado en Tierra del Fuego" class="gallery-img"
+                <img src="consultorio2.webp" loading="lazy" alt="Consultorio de psicología iluminado en Tierra del Fuego" class="gallery-img"
                     style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                <img src="consultorio3.webp" loading="lazy" alt="Consultorio equipado para psicopedagogía en Río Grande"
-                    class="gallery-img"
+                <img src="consultorio3.webp" loading="lazy" alt="Consultorio equipado para psicopedagogía en Río Grande" class="gallery-img"
                     style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                <img src="consultorio4.webp" loading="lazy" alt="Instalaciones modernas de CEJUF Consultorios"
-                    class="gallery-img"
+                <img src="consultorio4.webp" loading="lazy" alt="Instalaciones modernas de CEJUF Consultorios" class="gallery-img"
                     style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
             </div>
         </div>
@@ -2155,13 +1749,11 @@
                         <p>Estrada 1784</p>
                         <span>Río Grande, Tierra del Fuego</span>
                     </div>
-
                     <div class="info-block">
                         <h4 style="color: var(--brand-yellow);">Horarios</h4>
                         <p>Lunes a Sábado</p>
                         <span>09:00 a 21:00 hs</span>
                     </div>
-
                     <div class="info-block">
                         <h4 style="color: var(--brand-green);">Atención Exclusiva</h4>
                         <p>Solo vía WhatsApp</p>
@@ -2179,7 +1771,7 @@
         </div>
     </section>
 
-    <!-- PREGUNTAS FRECUENTES (FAQ) -->
+    <!-- FAQ -->
     <section class="faq">
         <div class="container faq-container">
             <div class="reveal" style="text-align: center; margin-bottom: 3rem;">
@@ -2195,11 +1787,10 @@
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
-                            Para solicitar un turno o realizar una consulta, simplemente debés escribirnos por WhatsApp
-                            al <a href="https://wa.me/542964402962" target="_blank" rel="noopener"
-                                style="color:var(--brand-green); font-weight:600;">+54 2964 402962</a>. Nuestro equipo
-                            de administración responderá a la brevedad coordinando día, horario y profesional adecuado
-                            para vos.
+                            Para solicitar un turno o realizar una consulta, simplemente debés escribirnos por WhatsApp al
+                            <a href="https://wa.me/542964402962" target="_blank" rel="noopener"
+                                style="color:var(--brand-green); font-weight:600;">+54 2964 402962</a>.
+                            Nuestro equipo de administración responderá a la brevedad coordinando día, horario y profesional adecuado para vos.
                         </div>
                     </div>
                 </div>
@@ -2210,9 +1801,7 @@
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
-                            El centro de salud se encuentra abierto de lunes a sábados, en horario corrido, de 09:00 a
-                            21:00 hs. Ten en cuenta que los horarios de cada especialista pueden variar dentro de esa
-                            franja.
+                            El centro de salud se encuentra abierto de lunes a sábados, en horario corrido, de 09:00 a 21:00 hs. Ten en cuenta que los horarios de cada especialista pueden variar dentro de esa franja.
                         </div>
                     </div>
                 </div>
@@ -2223,9 +1812,7 @@
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
-                            La modalidad de atención (particular, por reintegro, o cobertura de obra social) depende de
-                            los convenios de cada profesional. Cuando nos contactes por WhatsApp, indícanos si cuentas
-                            con alguna cobertura y te asesoramos específicamente.
+                            La modalidad de atención (particular, por reintegro, o cobertura de obra social) depende de los convenios de cada profesional. Cuando nos contactes por WhatsApp, indícanos si cuentas con alguna cobertura y te asesoramos específicamente.
                         </div>
                     </div>
                 </div>
@@ -2236,9 +1823,7 @@
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
-                            En caso de requerir re-programar o cancelar un turno ya asignado, te pedimos por favor que
-                            nos avises mediante un mensaje de WhatsApp con un mínimo de 24 horas de anticipación,
-                            permitiéndonos ofrecer ese valioso espacio a otro paciente.
+                            En caso de requerir re-programar o cancelar un turno ya asignado, te pedimos por favor que nos avises mediante un mensaje de WhatsApp con un mínimo de 24 horas de anticipación, permitiéndonos ofrecer ese valioso espacio a otro paciente.
                         </div>
                     </div>
                 </div>
@@ -2246,119 +1831,111 @@
         </div>
     </section>
 
-    <!-- CTA FINAL MEJORADO -->
-    <section class="cta-final">
-        <div class="container cta-inner reveal">
-            <div
-                style="font-size: 0.85rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--brand-green); margin-bottom: 1rem;">
-                ¿Necesitás un profesional?
+    <!-- FORMULARIO DE TURNOS -->
+    <section class="appointment-section" id="pedir-turno">
+        <div class="container">
+            <div class="appointment-card reveal">
+                <div class="ac-left">
+                    <h2>Pedí tu turno<br>hoy</h2>
+                    <p>Contanos sobre tu necesidad y qué tipo de especialista estás buscando. Te responderemos personalmente en menos de 24 horas.</p>
+                    
+                    <ul class="ac-benefits">
+                        <li><i class="fa-solid fa-check"></i> Respuesta personal rápida</li>
+                        <li><i class="fa-solid fa-check"></i> Atención a tu medida</li>
+                        <li><i class="fa-solid fa-check"></i> Trato directo y confidencial</li>
+                    </ul>
+                </div>
+                <div class="ac-right">
+                    <div class="form-group">
+                        <label for="wa_nombre">Nombre Completo</label>
+                        <input type="text" id="wa_nombre" placeholder="Ej: Juan Pérez">
+                    </div>
+                    <div class="form-group">
+                        <label for="wa_dni">DNI (Opcional)</label>
+                        <input type="text" id="wa_dni" placeholder="Ej: 30123456">
+                    </div>
+                    <div class="form-group">
+                        <label for="wa_especialidad">Especialidad Requerida</label>
+                        <select id="wa_especialidad">
+                            <option value="" disabled selected>Elegí una opción...</option>
+                            <option value="Psicología">Psicología</option>
+                            <option value="Psicopedagogía">Psicopedagogía</option>
+                            <option value="Fonoaudiología">Fonoaudiología</option>
+                            <option value="Psicomotricidad">Psicomotricidad</option>
+                            <option value="Musicoterapia">Musicoterapia</option>
+                            <option value="Terapia Ocupacional">Terapia Ocupacional</option>
+                            <option value="Consulta General">No estoy seguro/a, quiero consultar</option>
+                        </select>
+                    </div>
+                    
+                    <button id="btnPedirTurno" class="btn-wa-submit">
+                        <i class="fa-regular fa-paper-plane"></i> Solicitar turno
+                    </button>
+                    
+                    <div class="secure-note">
+                        <i class="fa-solid fa-lock"></i> Te redirigiremos a WhatsApp de forma segura.
+                    </div>
+                </div>
             </div>
-            <h2 class="sec-title">Solicitá tu turno por <span class="text-gradient-green">WhatsApp</span></h2>
-            <p class="sec-desc">Escribinos para coordinar tu cita o consultar disponibilidad.</p>
-            <a href="https://wa.me/5492964402962?text=Hola%20quiero%20solicitar%20un%20turno%20en%20CEJUF%20Consultorios"
-                target="_blank" rel="noopener" class="btn-base btn-cta-white"
-                style="padding: 1.2rem 2.5rem; font-size: 1.1rem; border-radius: 50px;">
-                <i class="fa-brands fa-whatsapp text-2xl" style="color: var(--brand-green);"></i> Escribinos por
-                WhatsApp
-            </a>
         </div>
     </section>
 
-    <!-- SECCIÓN SEO LOCAL OCULTA (Indexable por Google) -->
+    <!-- SEO LOCAL OCULTO -->
     <section class="seo-hidden">
         <h2>Psicólogos en Río Grande</h2>
-        <p>
-            En CEJUF Consultorios contamos con psicólogos en Río Grande especializados en atención para niños,
-            adolescentes y adultos, brindando un espacio seguro de salud mental y bienestar emocional.
-        </p>
-
+        <p>En CEJUF Consultorios contamos con psicólogos en Río Grande especializados en atención para niños, adolescentes y adultos, brindando un espacio seguro de salud mental y bienestar emocional.</p>
         <h2>Psicopedagogía en Río Grande</h2>
-        <p>
-            Nuestro equipo de psicopedagogas en Río Grande trabaja en la evaluación, diagnóstico y tratamiento de
-            dificultades de aprendizaje para fomentar el desarrollo cognitivo.
-        </p>
-
+        <p>Nuestro equipo de psicopedagogas en Río Grande trabaja en la evaluación, diagnóstico y tratamiento de dificultades de aprendizaje para fomentar el desarrollo cognitivo.</p>
         <h2>Fonoaudiología en Río Grande</h2>
-        <p>
-            Ofrecemos atención fonoaudiológica en Río Grande, Tierra del Fuego, para trastornos del lenguaje, habla,
-            comunicación y rehabilitación vocal y auditiva.
-        </p>
+        <p>Ofrecemos atención fonoaudiológica en Río Grande, Tierra del Fuego, para trastornos del lenguaje, habla, comunicación y rehabilitación vocal y auditiva.</p>
+        <h2>Psicomotricidad y Estimulación Temprana en Río Grande</h2>
+        <p>Contamos con psicomotricistas en Río Grande especializados en estimulación temprana y desarrollo infantil.</p>
+        <h2>Terapia Ocupacional en Río Grande</h2>
+        <p>Ofrecemos terapia ocupacional en Río Grande orientada a la autonomía, integración sensorial y calidad de vida.</p>
     </section>
 
-    <!-- FOOTER MEJORADO (Basado en la referencia) -->
+    <!-- FOOTER -->
     <footer>
         <div class="container">
             <div class="footer-grid reveal">
-                <!-- Columna 1: Branding -->
                 <div class="footer-col">
                     <div class="footer-logo-box">
-                        <img src="CEJUF%20LOGO%20PRINCIPAL%20PNG@300x.png" alt="CEJUF Consultorios">
+                        <img src="CEJUF%20LOGO%20PRINCIPAL%20PNG@300x.png" alt="CEJUF Consultorios" loading="lazy">
                     </div>
-                    <p>Especialistas en salud mental, psicopedagogía y fonoaudiología. Brindando atención de calidad,
-                        humana y personalizada en Tierra del Fuego.</p>
+                    <p>Especialistas en salud mental, psicopedagogía, fonoaudiología, psicomotricidad, musicoterapia y terapia ocupacional. Atención de calidad, humana y personalizada en Tierra del Fuego.</p>
                 </div>
 
-                <!-- Columna 2: Enlaces Rápidos -->
                 <div class="footer-col">
                     <h4>Enlaces Rápidos</h4>
                     <ul>
-                        <li><a href="#"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i> Inicio</a>
-                        </li>
-                        <li><a href="#servicios"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i>
-                                Especialidades</a></li>
-                        <li><a href="#equipo"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i>
-                                Profesionales</a></li>
-                        <li><a href="#alquiler"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i>
-                                Consultorios</a></li>
-                        <li><a href="#ubicacion"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i>
-                                Ubicación</a></li>
+                        <li><a href="#"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i> Inicio</a></li>
+                        <li><a href="#servicios"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i> Especialidades</a></li>
+                        <li><a href="#equipo"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i> Profesionales</a></li>
+                        <li><a href="#alquiler"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i> Consultorios</a></li>
+                        <li><a href="#ubicacion"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i> Ubicación</a></li>
                     </ul>
                 </div>
 
-                <!-- Columna 3: Contacto -->
                 <div class="footer-col">
                     <h4>Contacto</h4>
                     <ul>
-                        <li>
-                            <i class="fa-brands fa-whatsapp"></i>
-                            <span>+54 9 2964 402962</span>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>Estrada 1784<br>Río Grande, Tierra del Fuego<br>Argentina</span>
-                        </li>
-                        <li>
-                            <i class="fa-brands fa-instagram"></i>
-                            <span>@cejufconsultorios</span>
-                        </li>
+                        <li><i class="fa-brands fa-whatsapp"></i><span>+54 9 2964 402962</span></li>
+                        <li><i class="fa-solid fa-location-dot"></i><span>Estrada 1784<br>Río Grande, Tierra del Fuego<br>Argentina</span></li>
+                        <li><i class="fa-brands fa-instagram"></i><span>@cejufconsultorios</span></li>
                     </ul>
                 </div>
 
-                <!-- Columna 4: Medios de Pago y Horarios -->
                 <div class="footer-col">
                     <h4>Atención y Pagos</h4>
                     <ul>
-                        <li>
-                            <i class="fa-regular fa-clock"></i>
-                            <span>Lun a Sáb de 09:00 a 21:00 hs</span>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-check"></i>
-                            <span>Efectivo</span>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-check"></i>
-                            <span>Transferencia bancaria</span>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-check"></i>
-                            <span>Obras sociales (Consultar)</span>
-                        </li>
+                        <li><i class="fa-regular fa-clock"></i><span>Lun a Sáb de 09:00 a 21:00 hs</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Efectivo</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Transferencia bancaria</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Obras sociales (Consultar)</span></li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Bottom Bar -->
             <div class="footer-bottom">
                 <p>&copy; <span id="year"></span> CEJUF Consultorios. Todos los derechos reservados.</p>
                 <p>Salud Integral &bull; Río Grande, Tierra del Fuego</p>
@@ -2371,169 +1948,87 @@
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
-    <!-- LIGHTBOX MODAL -->
+    <!-- LIGHTBOX -->
     <div class="lightbox" id="lightbox">
         <div class="lightbox-close" id="lightboxClose"><i class="fa-solid fa-xmark"></i></div>
         <img src="" alt="Imagen ampliada" id="lightboxImg">
     </div>
 
-    <!-- WHATSAPP FLOTANTE (Desktop) -->
+    <!-- WHATSAPP FLOTANTE -->
     <a href="https://wa.me/5492964402962?text=Hola%20quiero%20solicitar%20un%20turno%20en%20CEJUF%20Consultorios"
-        target="_blank" rel="noopener" class="wa-float" title="Escribinos por WhatsApp"
-        aria-label="Contactar por WhatsApp">
+        target="_blank" rel="noopener" class="wa-float" title="Escribinos por WhatsApp" aria-label="Contactar por WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- WHATSAPP FIJO INFERIOR (Mobile) -->
+    <!-- CTA MÓVIL INFERIOR -->
     <a class="mobile-cta"
         href="https://wa.me/5492964402962?text=Hola%20quiero%20solicitar%20un%20turno%20en%20CEJUF%20Consultorios"
         target="_blank" rel="noopener">
         <i class="fa-brands fa-whatsapp text-xl"></i> Solicitar turno por WhatsApp
     </a>
 
-    <!-- SCRIPTS -->
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
 
-        // Efecto Navbar y Botón Top al hacer Scroll unificado
         const navbar = document.getElementById('navbar');
         const btnTop = document.getElementById('btnTop');
 
         window.addEventListener('scroll', () => {
-            // Navbar
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-
-            // Botón Volver Arriba
-            if (window.scrollY > 500) {
-                btnTop.classList.add('show');
-            } else {
-                btnTop.classList.remove('show');
-            }
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+            btnTop.classList.toggle('show', window.scrollY > 500);
         });
 
-        // Menú Móvil
         const mobileToggle = document.getElementById('mobileToggle');
         const navLinks = document.getElementById('navLinks');
 
         mobileToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             const icon = mobileToggle.querySelector('i');
-
-            // Accesibilidad ARIA
             const isExpanded = mobileToggle.getAttribute('aria-expanded') === 'true';
             mobileToggle.setAttribute('aria-expanded', !isExpanded);
-
-            if (navLinks.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-xmark');
-            } else {
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
-            }
+            icon.classList.toggle('fa-bars', !navLinks.classList.contains('active'));
+            icon.classList.toggle('fa-xmark', navLinks.classList.contains('active'));
         });
 
-        // Cerrar menú móvil al hacer click en un link
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
                 mobileToggle.setAttribute('aria-expanded', 'false');
-                mobileToggle.querySelector('i').classList.remove('fa-xmark');
-                mobileToggle.querySelector('i').classList.add('fa-bars');
+                const icon = mobileToggle.querySelector('i');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
             });
         });
 
-        // Animaciones de Aparición (Scroll Reveal)
-        const revealElements = document.querySelectorAll('.reveal');
-
-        const revealOptions = {
-            threshold: 0.15,
-            rootMargin: "0px 0px -50px 0px"
-        };
-
-        const revealOnScroll = new IntersectionObserver(function (entries, observer) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
-                if (!entry.isIntersecting) {
-                    return;
-                } else {
+                if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                     observer.unobserve(entry.target);
                 }
             });
-        }, revealOptions);
+        }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
 
-        revealElements.forEach(el => {
-            revealOnScroll.observe(el);
-        });
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-        // Acordeón de Preguntas Frecuentes (FAQ)
-        const faqQuestions = document.querySelectorAll('.faq-question');
-        faqQuestions.forEach(question => {
+        document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', () => {
                 const item = question.parentElement;
-
-                document.querySelectorAll('.faq-item').forEach(otherItem => {
-                    if (otherItem !== item) {
-                        otherItem.classList.remove('active');
-                    }
+                document.querySelectorAll('.faq-item').forEach(other => {
+                    if (other !== item) other.classList.remove('active');
                 });
-
                 item.classList.toggle('active');
             });
         });
 
-        btnTop.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
+        btnTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-        // Contadores Animados Numericos
-        const counters = document.querySelectorAll('.counter-num');
-        const speed = 200;
-
-        const counterObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const counter = entry.target;
-                    const updateCount = () => {
-                        const target = +counter.getAttribute('data-target');
-                        const count = +counter.innerText.replace('+', '');
-                        const inc = target / speed;
-
-                        if (count < target) {
-                            counter.innerText = Math.ceil(count + inc) + (counter.innerText.includes('+') ? '+' : '');
-                            setTimeout(updateCount, 15);
-                        } else {
-                            counter.innerText = target + (counter.getAttribute('data-target') == '100' ? '+' : '');
-                        }
-                    };
-
-                    if (counter.innerText === '0' || counter.innerText === '+0' || counter.innerText === '0+') {
-                        updateCount();
-                    }
-                    observer.unobserve(counter);
-                }
-            });
-        }, {
-            threshold: 0.5
-        });
-
-        counters.forEach(counter => {
-            counterObserver.observe(counter);
-        });
-
-        // Lightbox para Galería
-        const galleryImages = document.querySelectorAll('.gallery-img');
+        // Lightbox
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightboxImg');
         const lightboxClose = document.getElementById('lightboxClose');
 
-        galleryImages.forEach(img => {
+        document.querySelectorAll('.gallery-img').forEach(img => {
             img.addEventListener('click', () => {
                 lightboxImg.src = img.src;
                 lightbox.classList.add('active');
@@ -2541,26 +2036,43 @@
             });
         });
 
-        lightboxClose.addEventListener('click', () => {
+        const closeLightbox = () => {
             lightbox.classList.remove('active');
             document.body.style.overflow = '';
-        });
+        };
 
-        lightbox.addEventListener('click', (e) => {
-            if (e.target !== lightboxImg) {
-                lightbox.classList.remove('active');
-                document.body.style.overflow = '';
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', e => { if (e.target !== lightboxImg) closeLightbox(); });
+        document.addEventListener('keydown', e => { if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox(); });
+
+        // Lógica del Formulario a WhatsApp
+        document.getElementById('btnPedirTurno').addEventListener('click', function() {
+            const nombre = document.getElementById('wa_nombre').value.trim();
+            const dni = document.getElementById('wa_dni').value.trim();
+            const especialidad = document.getElementById('wa_especialidad').value;
+
+            if(!nombre) {
+                document.getElementById('wa_nombre').style.borderColor = 'red';
+                setTimeout(() => document.getElementById('wa_nombre').style.borderColor = '#E5E7EB', 2000);
+                document.getElementById('wa_nombre').focus();
+                return;
             }
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
-                lightbox.classList.remove('active');
-                document.body.style.overflow = '';
+            if(!especialidad) {
+                document.getElementById('wa_especialidad').style.borderColor = 'red';
+                setTimeout(() => document.getElementById('wa_especialidad').style.borderColor = '#E5E7EB', 2000);
+                document.getElementById('wa_especialidad').focus();
+                return;
             }
-        });
 
+            let mensaje = `Hola CEJUF, mi nombre es ${nombre}.`;
+            if (dni) {
+                mensaje += ` Mi DNI es ${dni}.`;
+            }
+            mensaje += ` Quisiera solicitar un turno para el área de ${especialidad}.`;
+
+            const url = `https://wa.me/5492964402962?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+        });
     </script>
 </body>
-
 </html>
